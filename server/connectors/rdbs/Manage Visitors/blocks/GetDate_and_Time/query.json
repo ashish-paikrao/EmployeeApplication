@@ -1,0 +1,17 @@
+{
+  "advanced": true,
+  "params": [],
+  "output": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "": {
+          "type": "date"
+        }
+      }
+    },
+    "id": "results"
+  },
+  "name": "GetDate_and_Time"
+}

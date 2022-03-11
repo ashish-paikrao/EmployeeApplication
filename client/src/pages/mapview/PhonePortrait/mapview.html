@@ -1,0 +1,21 @@
+<ion-header data-comp-id="header.1" style="padding: 0; margin: 0;">
+    <ion-navbar color="black" data-comp-id="navbar.1" mode="ios" style>
+        <ion-row align-items-center data-comp-id="row.1" style="padding: 4px 4px 0;">
+            <ion-col data-comp-id="column.1" style="text-align: left; padding: 0;"></ion-col>
+            <ion-col col-auto data-comp-id="column.2" style="text-align: center; padding: 4px 0;">
+                <div data-comp-id="text.1" ion-text style="font-size: 16px; font-weight: bold;" color="white">Address</div>
+            </ion-col>
+            <ion-col data-comp-id="column.3" style="text-align: right; padding: 0;">
+                <button (click)="dismissModal()" clear data-comp-id="button.1" [disabled]="closeDisabled" ion-button mode="ios" small style="margin: 0 2px; font-size: 17px; padding: 0 8px;">
+                    <span>Close</span>
+                </button>
+            </ion-col>
+            <ion-col col-12 data-comp-id="column.4" style="padding: 0;">
+                <ion-searchbar #searchbar [ngModel]="data.AddressSearch" data-comp-id="searchbar.1" mode="ios" placeholder="Type address..." style="padding: 0;" type="search" (search)="onSearch($event)" (ionFocus)="onFocus($event)" (ionClear)="onSearch($event)" (ionBlur)="onBlur($event)"></ion-searchbar>
+            </ion-col>
+        </ion-row>
+    </ion-navbar>
+</ion-header>
+<ion-content data-comp-id="content.1">
+    <map (markerMoved)="onMarkerMoved($event)" [address]="data.mapInput.Address" [apiKey]="'AIzaSyBMGOUOBqbyVioW-Dj0EXVX3Aon3XEbCvc'" [markerDraggable]="true" [yourLocationControl]="true" [zoomLevel]="10" data-comp-id="map.1" markerType="animated-beacon" style="height: 100%;" [lng]="data.mapInput.Longitude" [lat]="data.mapInput.Latitude"></map>
+</ion-content>

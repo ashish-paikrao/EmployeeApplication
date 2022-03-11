@@ -1,0 +1,33 @@
+{
+  "advanced": true,
+  "params": [
+    "{User_id}",
+    "{selecteddate}",
+    "{selectedshift}",
+    "{Loactioncode}"
+  ],
+  "output": {
+    "schema": "dbo",
+    "table": "EmployeeSchedule",
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "UserID": {
+          "type": "Number"
+        },
+        "LocationCode": {
+          "type": "String"
+        },
+        "ScheduleDate": {
+          "type": "String"
+        },
+        "SelectedShift": {
+          "type": "Number"
+        }
+      }
+    },
+    "id": "results"
+  },
+  "name": "checkexisting_user_record"
+}

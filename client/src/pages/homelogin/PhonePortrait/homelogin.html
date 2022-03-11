@@ -1,0 +1,87 @@
+<ion-header data-comp-id="header.1">
+    <ion-navbar data-comp-id="navbar.1" color="coal" style>
+        <ion-row data-comp-id="row.1" style="margin: 5px;" justify-content-center>
+            <ion-col data-comp-id="column.1" style="text-align: right;">
+                <ion-icon style="font-size: 25px; padding: 0px 50px 0px 0px;" data-comp-id="icon.1" class=" ion-ios-arrow-back-outline" color="white" (click)="backward()"></ion-icon>
+            </ion-col>
+            <ion-col data-comp-id="column.2" style="text-align: center;">
+                <span ion-text data-comp-id="text.1" style="text-align: center; font-size: 17px;" color="white">Schedule</span>
+            </ion-col>
+            <ion-col data-comp-id="column.3">
+                <ion-icon style="font-size: 25px; padding: 0px 0px 0px 50px;" data-comp-id="icon.2" class=" ion-ios-arrow-forward-outline" color="white" (click)="forwa()"></ion-icon>
+            </ion-col>
+        </ion-row>
+        <button data-comp-id="button.1" icon-only ion-button menuToggle start>
+            <ion-icon class="ion-ios-menu"></ion-icon>
+        </button>
+    </ion-navbar>
+</ion-header>
+<ion-content data-comp-id="content.1" class="content-coal" style>
+    <ion-refresher enabled="true" data-comp-id="refresher.1">
+        <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+    <ion-card-content data-comp-id="card-content.1" style="border-top: 2px none rgb(255, 255, 255); border-right: 2px none rgb(255, 255, 255); border-bottom: 20px none rgb(255, 255, 255); border-left: 2px none rgb(255, 255, 255); margin: 0px;">
+        <ion-card-content data-comp-id="card-content.2" style="margin: 10px;">
+            <div ion-text data-comp-id="text.2" style="text-align: center; width: 100px; float: right;" color="white" [innerHTML]="data.EndDate"></div>
+            <div ion-text data-comp-id="text.3" style="float: left; text-align: center; width: 100px;" color="white" [innerHTML]="data.StartDate"></div>
+            <div ion-text data-comp-id="text.4" style="text-align: center; float: none;" color="white">-</div>
+        </ion-card-content>
+        <ion-row data-comp-id="row.2" class="row-transparent" style="margin: 0px; padding: 20px 0px 0px 0px;">
+            <ion-col data-comp-id="column.4" style="padding: 2px;" class="Customcolumn" [ngClass]="{'active': data.Days=='Mon'}">
+                <button block ion-button data-comp-id="button.2" style="margin: 0px; padding: 0px; border-radius: 0px;" class="defaultcolor" (click)="demo('Mon',data.Mon)">
+                    <span>Mon</span>
+                </button>
+                <div ion-text data-comp-id="text.5" [innerHTML]="data.Mon.charAt(6)+data.Mon.charAt(7)" input-format="YYYY-MM-DD" output-format="YYYY-MM-DD" style="text-align: center;"></div>
+            </ion-col>
+            <ion-col data-comp-id="column.5" style="padding: 2px;" class="Customcolumn" [ngClass]="{'active': data.Days=='Tue'}">
+                <button block ion-button data-comp-id="button.3" style="margin: 0px; padding: 0px; border-radius: 0px;" (click)="demo('Tue',data.Tue)" color="primary">
+                    <span>Tue</span>
+                </button>
+                <div ion-text data-comp-id="text.6" [innerHTML]="data.Tue.charAt(6)+data.Tue.charAt(7)" input-format="YYYY-MM-DD" output-format="YYYY-MM-DD" style="text-align: center;"></div>
+            </ion-col>
+            <ion-col data-comp-id="column.6" style="padding: 2px;" class="Customcolumn" [ngClass]="{'active': data.Days=='Wen'}">
+                <button block ion-button data-comp-id="button.4" style="margin: 0px; padding: 0px; border-radius: 0px;" (click)="demo('Wen',data.Wen)" color="primary">
+                    <span>Wed</span>
+                </button>
+                <div ion-text data-comp-id="text.7" [innerHTML]="data.Wen.charAt(6)+data.Wen.charAt(7)" input-format="YYYY-MM-DD" output-format="YYYY-MM-DD" style="text-align: center;"></div>
+            </ion-col>
+            <ion-col data-comp-id="column.7" style="padding: 2px;" class="Customcolumn" [ngClass]="{'active': data.Days=='Thu'}">
+                <button block ion-button data-comp-id="button.5" style="margin: 0px; padding: 0px; border-radius: 0px;" color="primary" (click)="demo('Thu',data.Thu)">
+                    <span>Thu</span>
+                </button>
+                <div ion-text data-comp-id="text.8" [innerHTML]="data.Thu.charAt(6)+data.Thu.charAt(7)" output-format="DDMMYYYY" style="text-align: center;" input-format="DDMMYYYY"></div>
+            </ion-col>
+            <ion-col data-comp-id="column.8" style="padding: 2px;" class="Customcolumn" [ngClass]="{'active': data.Days=='Fri'}">
+                <button block ion-button data-comp-id="button.6" style="margin: 0px; padding: 0px; border-radius: 0px;" (click)="demo('Fri',data.Fri)" color="primary">
+                    <span>Fri</span>
+                </button>
+                <div ion-text data-comp-id="text.9" [innerHTML]="data.Fri.charAt(6)+data.Fri.charAt(7)" input-format="YYYY-MM-DD" output-format="YYYY-MM-DD" style="text-align: center;"></div>
+            </ion-col>
+            <ion-col data-comp-id="column.9" style="padding: 2px;" class="Customcolumn" [ngClass]="{'active': data.Days=='Sat'}">
+                <button block ion-button data-comp-id="button.7" style="margin: 0px; padding: 0px; border-radius: 0px;" (click)="demo('Sat',data.Sat)" color="primary">
+                    <span>Sat</span>
+                </button>
+                <div ion-text data-comp-id="text.10" [innerHTML]="data.Sat.charAt(6)+data.Sat.charAt(7)" input-format="YYYY-MM-DD" output-format="YYYY-MM-DD" style="text-align: center;"></div>
+            </ion-col>
+            <ion-col data-comp-id="column.10" style="padding: 2px;" class="Customcolumn" [ngClass]="{'active': data.Days=='Sun'}">
+                <button block ion-button data-comp-id="button.8" style="margin: 0px; padding: 0px; border-radius: 0px;" (click)="demo('Sun',data.Sun)" color="primary">
+                    <span>Sun</span>
+                </button>
+                <div ion-text data-comp-id="text.11" [innerHTML]="data.Sun.charAt(6)+data.Sun.charAt(7)" input-format="YYYY-MM-DD" output-format="YYYY-MM-DD" style="text-align: center;"></div>
+            </ion-col>
+        </ion-row>
+        <ion-list data-comp-id="list.1" style="margin: 10px 20px 10px 20px;">
+            <ion-item data-comp-id="checkbox.1" color="coal" style>
+                <ion-label color="white" style>Apply same for selected week</ion-label>
+                <ion-checkbox [(ngModel)]="data.sameforalldays" style color="coal"></ion-checkbox>
+            </ion-item>
+        </ion-list>
+    </ion-card-content>
+    <ion-card-content data-comp-id="card-content.3" style="padding: 0px; margin: 10px 20px 10px 20px;" *ngIf="data.Days!='Sat' && data.Days!='Sun'">
+        <div data-comp-id="div.1" style="margin: 10px 20px 10px 20px;">
+            <button block ion-button data-comp-id="button.9" (click)="submitclicked()">
+                <span>Submit</span>
+            </button>
+        </div>
+    </ion-card-content>
+</ion-content>

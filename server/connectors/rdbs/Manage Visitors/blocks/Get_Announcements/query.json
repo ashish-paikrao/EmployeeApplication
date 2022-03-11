@@ -1,0 +1,11 @@
+{
+  "method": "select",
+  "table": "Announcements",
+  "schema": "dbo",
+  "name": "Get_Announcements",
+  "where": {},
+  "include": [],
+  "limit": 5,
+  "order": "Index",
+  "orderDirection": "ASC"
+}

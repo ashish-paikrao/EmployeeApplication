@@ -1,0 +1,60 @@
+{
+  "method": "select",
+  "table": "EmployeeSchedule",
+  "schema": "dbo",
+  "name": "check_fullday_existing_record",
+  "where": {
+    "and": [
+      {
+        "UserID": "{User_id}"
+      },
+      {
+        "and": [
+          {
+            "LocationCode": "{Loactioncode}"
+          },
+          {
+            "and": [
+              {
+                "ScheduleDate": "{Wen}"
+              },
+              {
+                "and": [
+                  {
+                    "ScheduleDate": "{Thu}"
+                  },
+                  {
+                    "and": [
+                      {
+                        "ScheduleDate": "{Mon}"
+                      },
+                      {
+                        "and": [
+                          {
+                            "ScheduleDate": "{Tue}"
+                          },
+                          {
+                            "and": [
+                              {
+                                "ScheduleDate": "{Fri}"
+                              },
+                              {
+                                "SelectedShift": "{selectedshift}"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "include": [],
+  "orderDirection": "ASC"
+}

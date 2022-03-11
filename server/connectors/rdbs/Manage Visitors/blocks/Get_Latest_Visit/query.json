@@ -1,0 +1,56 @@
+{
+  "advanced": true,
+  "params": [
+    "{userId}"
+  ],
+  "output": {
+    "schema": "dbo",
+    "table": "Visits",
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "StartTime": {
+          "type": "Date"
+        },
+        "EndTime": {
+          "type": "Date"
+        },
+        "Status": {
+          "type": "String"
+        },
+        "UserId": {
+          "type": "Number"
+        },
+        "Id": {
+          "type": "Number"
+        },
+        "StartTemperature": {
+          "type": "Number"
+        },
+        "EndTemperature": {
+            "type": "Number"
+        },
+        "Answers": {
+          "schema": "dbo",
+          "table": "Answers",
+          "label": "Answers",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {}
+          }
+        },
+        "User": {
+          "schema": "dbo",
+          "table": "Users",
+          "label": "User",
+          "type": "object",
+          "properties": {}
+        }
+      }
+    },
+    "id": "results"
+  },
+  "name": "Get_Latest_Visit"
+}

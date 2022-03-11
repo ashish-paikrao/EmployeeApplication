@@ -1,0 +1,11 @@
+{
+  "method": "select",
+  "table": "DeskInformation",
+  "schema": "dbo",
+  "name": "Get_desks_for_selected_floor",
+  "where": {
+    "FloorNo": "{floorNo}"
+  },
+  "include": [],
+  "orderDirection": "ASC"
+}

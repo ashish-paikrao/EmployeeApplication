@@ -1,0 +1,22 @@
+<ion-content class="content-coal" data-comp-id="content.1" style>
+    <ion-row align-items-center data-comp-id="row.1" justify-content-center style="margin: 100px 0 30px; padding: 0;">
+        <ion-col col-auto data-comp-id="column.1" style="margin: 0; padding: 0;">
+            <img data-comp-id="img.1" src="assets/images/oauthloginv2/Back_to_Work.svg" style="width: 220px; height: 100px;"></ion-col>
+        </ion-row>
+        <ion-row data-comp-id="row.2" style="margin: 80% 0 0 0;">
+            <ion-col data-comp-id="column.2">
+                <button block ion-button data-comp-id="button.1" *ngIf="data.authorizeUrl" (click)="reopenAuthorizedUrl()">
+                    <span>
+                        Click here if you are not automatically redirected
+                    </span>
+                </button>
+            </ion-col>
+        </ion-row>
+        <ion-row data-comp-id="row.3" style="margin: 0px 0 24px;">
+            <ion-col class="centered" data-comp-id="column.3" style="padding: 0;">
+                <span data-comp-id="text.1" ion-text style="font-size: 15px; margin: 0 5px 0 0;">Powered By</span>
+                <img data-comp-id="img.2" src="assets/images/oauthloginv2/magic.svg"></ion-col>
+            </ion-row>
+            <div data-comp-id="div.1" id="loader"></div>
+
+        </ion-content>

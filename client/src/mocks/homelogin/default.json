@@ -1,0 +1,16 @@
+{
+  "EndDate": "Some text",
+  "StartDate": "Some text",
+  "Days": "Wen",
+  "Thu": "20211028",
+  "Fri": "20211029",
+  "Sat": "20211030",
+  "Sun": "20211031",
+  "Mon": "20211025",
+  "Tue": "20211026",
+  "Wen": "20211027",
+  "CheckExistingrecord": [],
+  "sameforalldays": false,
+  "dailylimitformultipledays": [],
+  "AvailableEntries": {}
+}

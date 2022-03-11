@@ -1,0 +1,99 @@
+screen-question-phoneportrait {
+    ion-item > .item-inner {
+        border-bottom: none !important;
+    }
+    .toolbar-title-ios {
+      font-size: 20px;
+      color: #ff8a65 !important;
+    }
+
+    .question-buttons {
+        display: flex;
+        width: 115px;
+        height: 30px;
+        margin: 0;
+        background: color($colors, coal);
+        border-radius: 8px;
+
+        .radio {
+            width: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .item-block {
+            padding: 0;
+            border-radius: 8px;
+            border: none !important;
+            min-height: inherit;
+
+            .item-inner {
+                padding: 0;
+                text-align: center;
+
+                ion-label {
+                    margin: 0;
+                }
+            }
+
+            &:first-child.item-radio-checked {
+                background: #ff8a65;
+            }
+
+            &.item-radio-checked {
+                background: #4ac66c;
+            }
+        }
+    }
+
+    .question-list-checkbox {
+        min-height: auto;
+        line-height: 14px;
+        margin-bottom: 12px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &.item-checkbox-disabled {
+            ion-label {
+                opacity: 1 !important;
+            }
+        }
+
+        .checkbox-ios {
+            margin: 0 8px 0 0 !important;
+
+            &.checkbox-disabled {
+                opacity: 1 !important;
+            }
+
+            .checkbox-icon {
+                background-color: transparent;
+                border-color: color($colors, primary);
+                width: 24px;
+                height: 24px;
+
+                &.checkbox-checked {
+                    background-color: color($colors, primary);
+                    border-color: color($colors, primary);
+
+                    .checkbox-inner {
+                        width: 6px;
+                        height: 11px;
+                        border-width: 2px;
+                        border-top-width: 0;
+                        border-left-width: 0;
+                        top: 4px;
+                        left: 8px;
+                        border-color: color($colors, white);
+                    }
+                }
+            }
+        }
+
+        .label-ios {
+            margin: 0;
+        }
+    }
+}

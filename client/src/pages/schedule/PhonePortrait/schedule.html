@@ -1,0 +1,96 @@
+<ion-header data-comp-id="header.1">
+    <ion-navbar data-comp-id="navbar.1" color="medium" style>
+        <button data-comp-id="button.1" icon-only ion-button menuToggle (click)="go('home')">
+            <ion-icon class=" ion-ios-arrow-round-back-outline" style="padding: 0px 16px;" color="primary"></ion-icon>
+        </button>
+        <ion-title data-comp-id="title.1">
+            <div data-comp-id="text.1" ion-text>Schedule</div>
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content data-comp-id="content.1" class="content-coal" style>
+    <ion-refresher enabled="true" data-comp-id="refresher.1">
+        <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+    <ion-card-content data-comp-id="card-content.1" style="border-top: 2px none rgb(255, 255, 255); border-right: 2px none rgb(255, 255, 255); border-bottom: 20px none rgb(255, 255, 255); border-left: 2px none rgb(255, 255, 255); margin: 10px 5px  10px 5px;">
+        <ion-row data-comp-id="row.1" class="row-medium" style="margin: 1px 2px 1px 2px;">
+            <ion-col data-comp-id="column.1" style="padding: 2px;">
+                <button block ion-button data-comp-id="button.2" style="margin: 0px; padding: 0px; border-radius: 0px;" (click)="demo('Mon')" outline color="primary" [disabled]="data.Sameforallweeks==true">
+                    <span>Mon</span>
+                </button>
+            </ion-col>
+            <ion-col data-comp-id="column.2" style="padding: 2px;">
+                <button block ion-button data-comp-id="button.3" style="margin: 0px; padding: 0px; border-radius: 0px;" (click)="demo('Tue')" outline color="primary" [disabled]="data.Sameforallweeks==true">
+                    <span>Tue</span>
+                </button>
+            </ion-col>
+            <ion-col data-comp-id="column.3" style="padding: 2px;">
+                <button block ion-button data-comp-id="button.4" style="margin: 0px; padding: 0px; border-radius: 0px;" (click)="demo('Wen')" color="primary" outline [disabled]="data.Sameforallweeks==true">
+                    <span>Wen</span>
+                </button>
+            </ion-col>
+            <ion-col data-comp-id="column.4" style="padding: 2px;">
+                <button block ion-button data-comp-id="button.5" style="margin: 0px; padding: 0px; border-radius: 0px;" (click)="demo('Thu')" color="primary" outline [disabled]="data.Sameforallweeks==true">
+                    <span>Thu</span>
+                </button>
+            </ion-col>
+            <ion-col data-comp-id="column.5" style="padding: 2px;">
+                <button block ion-button data-comp-id="button.6" style="margin: 0px; padding: 0px; border-radius: 0px;" (click)="demo('Fri')" outline color="primary" [disabled]="data.Sameforallweeks==true">
+                    <span>Fri</span>
+                </button>
+            </ion-col>
+            <ion-col data-comp-id="column.6" style="padding: 2px;">
+                <button block ion-button data-comp-id="button.7" style="margin: 0px; padding: 0px; border-radius: 0px;" (click)="demo(sat)" outline color="primary" [disabled]="data.Sameforallweeks==true">
+                    <span>Sat</span>
+                </button>
+            </ion-col>
+            <ion-col data-comp-id="column.7" style="padding: 2px;">
+                <button block ion-button data-comp-id="button.8" style="margin: 0px; padding: 0px; border-radius: 0px;" (click)="demo(sun)" outline color="primary" [disabled]="data.Sameforallweeks==true">
+                    <span>Sun</span>
+                </button>
+            </ion-col>
+        </ion-row>
+    </ion-card-content>
+    <ion-card data-comp-id="card.1" color="medium" style *ngIf="data.Days">
+        <ion-card-content data-comp-id="card-content.2">
+            <ion-list data-comp-id="list.1" class="list-container-medium" style no-lines>
+                <ion-item data-comp-id="checkbox.1" color="medium" style>
+                    <ion-label text-start padding-vertical style="font-size: 16px;" color="white">Same for all Weeks</ion-label>
+                    <ion-checkbox item-start color="primary" style (click)="checkbox()" [(ngModel)]="data.Sameforallweeks"></ion-checkbox>
+                </ion-item>
+            </ion-list>
+            <ion-list radio-group data-comp-id="radio-group.1" class="radio-group-medium" style no-lines [(ngModel)]="data.highlightradiobutton">
+                <ion-item data-comp-id="radio.1" color="medium" style="font-size: 16px;">
+                    <ion-label>First Half</ion-label>
+                    <ion-radio color-checked="primary" style item-start (click)="radioclicked('first')" [value]="1"></ion-radio>
+                </ion-item>
+                <ion-item data-comp-id="radio.2" color="medium" style="font-size: 16px;">
+                    <ion-label>Second Half</ion-label>
+                    <ion-radio color-checked="primary" style item-start (click)="radioclicked('second')" [value]="2"></ion-radio>
+                </ion-item>
+                <ion-item data-comp-id="radio.3" color="medium" style="font-size: 16px;">
+                    <ion-label>Full Day</ion-label>
+                    <ion-radio color-checked="primary" style item-start (click)="radioclicked('full')" [value]="3"></ion-radio>
+                </ion-item>
+                <ion-item data-comp-id="radio.4" color="medium" style="font-size: 16px;">
+                    <ion-label>None</ion-label>
+                    <ion-radio color-checked="primary" style item-start (click)="radioclicked('None')" [value]="4"></ion-radio>
+                </ion-item>
+            </ion-list>
+        </ion-card-content>
+    </ion-card>
+    <div data-comp-id="div.1" style="margin: 10px 20px 10px 20px;" *ngIf="data.Days">
+        <button block ion-button data-comp-id="button.9" (click)="submitclicked()">
+            <span>Submit</span>
+        </button>
+    </div>
+</ion-content>
+<ion-footer data-comp-id="footer.1">
+    <ion-row data-comp-id="row.2">
+        <ion-col data-comp-id="column.8" style="text-align: center;">
+            <button data-comp-id="button.10" ion-button>
+                <span>Button</span>
+            </button>
+        </ion-col>
+    </ion-row>
+</ion-footer>

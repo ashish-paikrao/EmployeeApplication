@@ -1,0 +1,13 @@
+{
+  "method": "select",
+  "table": "Users",
+  "schema": "dbo",
+  "name": "fetching__user_data",
+  "where": {
+    "Name": {
+      "neq": "null"
+    }
+  },
+  "include": [],
+  "orderDirection": "ASC"
+}

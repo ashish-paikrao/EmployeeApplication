@@ -1,0 +1,13 @@
+{
+  "name": "BackToWork",
+  "short_name": "BackToWork",
+  "start_url": "index.html",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "assets/icon/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ]
+}

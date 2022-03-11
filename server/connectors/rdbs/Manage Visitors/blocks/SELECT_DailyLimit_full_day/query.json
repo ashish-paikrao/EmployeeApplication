@@ -1,0 +1,46 @@
+{
+  "method": "select",
+  "table": "DailyLimit",
+  "schema": "dbo",
+  "name": "SELECT_DailyLimit_full_day",
+  "where": {
+    "and": [
+      {
+        "LocationCode": "{Loactioncode}"
+      },
+      {
+        "and": [
+          {
+            "ScheduleDate": "{Mon}"
+          },
+          {
+            "and": [
+              {
+                "ScheduleDate": "{Tue}"
+              },
+              {
+                "and": [
+                  {
+                    "ScheduleDate": "{Wen}"
+                  },
+                  {
+                    "and": [
+                      {
+                        "ScheduleDate": "{Thu}"
+                      },
+                      {
+                        "ScheduleDate": "{Fri}"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "include": [],
+  "orderDirection": "ASC"
+}

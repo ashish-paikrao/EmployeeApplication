@@ -1,0 +1,50 @@
+<ion-menu [content]="content" id="menu-component">
+    <ion-header data-comp-id="header.1">
+        <ion-toolbar data-comp-id="toolbar.1" menuClose color="coal" style mode="md">
+            <ion-title data-comp-id="title.1">
+                <span data-comp-id="text.1" ion-text color="white" style="font-weight: normal;">Menu</span>
+            </ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content data-comp-id="content.1" menuClose class="content-coal" style>
+        <ion-list data-comp-id="list.1" mode="ios" no-lines>
+            <ion-item data-comp-id="item.1" menuClose mode="ios" (click)="go('deskinformation')" no-lines color="medium" style="border-bottom: 1px solid rgb(44, 44, 46);">
+                <ion-icon data-comp-id="icon.1" item-start class=" ion-md-person"></ion-icon>
+                <div data-comp-id="text.2" ion-text>Profile</div>
+            </ion-item>
+            <ion-item data-comp-id="item.2" menuClose mode="ios" (click)="go('home')" no-lines color="medium" style="border-bottom: 1px solid rgb(44, 44, 46);">
+                <ion-icon data-comp-id="icon.2" item-start class=" ion-md-home"></ion-icon>
+                <div data-comp-id="text.3" ion-text>Dashboard</div>
+            </ion-item>
+            <!-- <ion-item data-comp-id="item.2" menuClose no-lines style="border-bottom: 1px solid rgb(44, 44, 46);" color="medium">
+                                                                                                                                                                                                                                                                                                                                                                                        <ion-icon class="ion-md-exit" data-comp-id="icon.2" item-start></ion-icon>
+                                                                                                                                                                                                                                                                                                                                                                                        <div data-comp-id="text.3" ion-text>Visitors</div>
+                                                                                                                                                                                                                                                                                                                                                                                    </ion-item> -->
+            <!-- <ion-item data-comp-id="item.3" menuClose color="medium" no-lines style="border-bottom: 1px solid rgb(44, 44, 46);" (click)="go('question')">
+                                                                                                                                                                                                                                                                                                                                                                                        <ion-icon class="ion-md-exit" data-comp-id="icon.3" item-start></ion-icon>
+                                                                                                                                                                                                                                                                                                                                                                                        <div data-comp-id="text.4" ion-text>History</div>
+                                                                                                                                                                                                                                                                                                                                                                                    </ion-item> -->
+            <ion-item data-comp-id="item.3" menuClose color="medium" no-lines style="border-bottom: 1px solid rgb(44, 44, 46);" mode="ios" (click)="go('question')">
+                <ion-icon data-comp-id="icon.3" item-start class=" ion-md-checkbox-outline"></ion-icon>
+                <div data-comp-id="text.4" ion-text>Take COVID survey</div>
+            </ion-item>
+            <ion-item data-comp-id="item.4" menuClose color="medium" no-lines style="border-bottom: 1px solid rgb(44, 44, 46);" mode="ios" (click)="action('schedulescreen')">
+                <ion-icon data-comp-id="icon.4" item-start class=" fa fa-calendar"></ion-icon>
+                <div data-comp-id="text.5" ion-text>Schedule</div>
+            </ion-item>
+            <ion-item data-comp-id="item.5" menuClose color="medium" no-lines style="border-bottom: 1px solid rgb(44, 44, 46);" mode="ios" (click)="go('bookingsytem')">
+                <ion-icon data-comp-id="icon.5" item-start class=" fa fa-check"></ion-icon>
+                <div data-comp-id="text.6" ion-text>Desk Booking</div>
+            </ion-item>
+            <ion-item data-comp-id="item.6" menuClose color="medium" no-lines style="border-bottom: 1px solid rgb(44, 44, 46);" mode="ios" (click)="navigationService.go('settings')">
+                <ion-icon data-comp-id="icon.6" item-start class=" ion-md-settings"></ion-icon>
+                <div data-comp-id="text.7" ion-text>Settings</div>
+            </ion-item>
+            <ion-item (click)="logout()" data-comp-id="item.7" menuClose color="medium" style="border-bottom: 1px solid rgb(44, 44, 46);" mode="ios">
+                <ion-icon class="ion-md-exit" data-comp-id="icon.7" item-start></ion-icon>
+                <div data-comp-id="text.8" ion-text>Logout</div>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-menu>
+<ion-nav #content></ion-nav>

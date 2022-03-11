@@ -1,0 +1,495 @@
+{
+  "sys": {},
+  "dbo": {
+    "Questions": {
+      "name": "Questions",
+      "schema": "dbo",
+      "properties": {
+        "Text": {
+          "type": "String"
+        },
+        "Type": {
+          "type": "String"
+        },
+        "Index": {
+          "type": "Number"
+        },
+        "IsRequired": {
+          "type": "String"
+        },
+        "Id": {
+          "type": "Number",
+          "id": 1
+        },
+        "IsParent": {
+          "type": "String"
+        },
+        "ParentId": {
+          "type": "Number"
+        },
+        "Country": {
+          "type": "String"
+        }
+      },
+      "hasMany": {
+        "Answers": {
+          "tableName": "Answers",
+          "schema": "dbo",
+          "primaryKey": "Id",
+          "foreignKey": "QuestionId"
+        }
+      }
+    },
+    "Answers": {
+      "name": "Answers",
+      "schema": "dbo",
+      "properties": {
+        "UserId": {
+          "type": "Number"
+        },
+        "QuestionId": {
+          "type": "Number"
+        },
+        "Answer": {
+          "type": "String"
+        },
+        "VisitId": {
+          "type": "Number"
+        },
+        "Id": {
+          "type": "Number",
+          "id": 1
+        },
+        "Date": {
+          "type": "Date"
+        },
+        "FormId": {
+          "type": "String"
+        }
+      },
+      "belongsTo": {
+        "Question": {
+          "tableName": "Questions",
+          "schema": "dbo",
+          "primaryKey": "Id",
+          "foreignKey": "QuestionId"
+        },
+        "User": {
+          "tableName": "Users",
+          "schema": "dbo",
+          "primaryKey": "Id",
+          "foreignKey": "UserId"
+        },
+        "Visit": {
+          "tableName": "Visits",
+          "schema": "dbo",
+          "primaryKey": "Id",
+          "foreignKey": "VisitId"
+        }
+      }
+    },
+    "Announcements": {
+      "name": "Announcements",
+      "schema": "dbo",
+      "properties": {
+        "Title": {
+          "type": "String"
+        },
+        "Details": {
+          "type": "String"
+        },
+        "Index": {
+          "type": "Number"
+        },
+        "Id": {
+          "type": "Number",
+          "id": 1
+        },
+        "DateCreated": {
+          "type": "Date"
+        }
+      }
+    },
+    "CheckIns": {
+      "name": "CheckIns",
+      "schema": "dbo",
+      "properties": {
+        "Date": {
+          "type": "Date"
+        },
+        "Status": {
+          "type": "String"
+        },
+        "Address": {
+          "type": "String"
+        },
+        "Latitude": {
+          "type": "Number"
+        },
+        "Longitude": {
+          "type": "Number"
+        },
+        "Id": {
+          "type": "Number",
+          "id": 1
+        },
+        "UserId": {
+          "type": "Number"
+        }
+      },
+      "belongsTo": {
+        "User": {
+          "tableName": "Users",
+          "schema": "dbo",
+          "primaryKey": "Id",
+          "foreignKey": "UserId"
+        }
+      }
+    },
+    "EmployeeTemperatures": {
+      "name": "EmployeeTemperatures",
+      "schema": "dbo",
+      "properties": {
+        "UserId": {
+          "type": "Number"
+        },
+        "AnswersFormId": {
+          "type": "String"
+        },
+        "Temperature": {
+          "type": "Number"
+        },
+        "Id": {
+          "type": "Number",
+          "id": 1
+        },
+        "Date": {
+          "type": "Date"
+        }
+      },
+      "belongsTo": {
+        "User": {
+          "tableName": "Users",
+          "schema": "dbo",
+          "primaryKey": "Id",
+          "foreignKey": "UserId"
+        }
+      }
+    },
+    "Users": {
+      "name": "Users",
+      "schema": "dbo",
+      "properties": {
+        "Email": {
+          "type": "String"
+        },
+        "Password": {
+          "type": "String"
+        },
+        "Id": {
+          "type": "Number",
+          "id": 1
+        },
+        "Role": {
+          "type": "String"
+        },
+        "Name": {
+          "type": "String"
+        },
+        "Phone": {
+          "type": "String"
+        },
+        "Address": {
+          "type": "String"
+        },
+        "EmployeeId": {
+          "type": "String"
+        },
+        "Latitude": {
+          "type": "Number"
+        },
+        "Longitude": {
+          "type": "Number"
+        },
+        "OAuthId": {
+          "type": "String"
+        }
+      },
+      "hasMany": {
+        "Answers": {
+          "tableName": "Answers",
+          "schema": "dbo",
+          "primaryKey": "Id",
+          "foreignKey": "UserId"
+        },
+        "Checkins": {
+          "tableName": "CheckIns",
+          "schema": "dbo",
+          "primaryKey": "Id",
+          "foreignKey": "UserId"
+        },
+        "Employeetemperatures": {
+          "tableName": "EmployeeTemperatures",
+          "schema": "dbo",
+          "primaryKey": "Id",
+          "foreignKey": "UserId"
+        },
+        "Visits": {
+          "tableName": "Visits",
+          "schema": "dbo",
+          "primaryKey": "Id",
+          "foreignKey": "UserId"
+        }
+      }
+    },
+    "Visits": {
+      "name": "Visits",
+      "schema": "dbo",
+      "properties": {
+        "StartTime": {
+          "type": "Date"
+        },
+        "EndTime": {
+          "type": "Date"
+        },
+        "Status": {
+          "type": "String"
+        },
+        "UserId": {
+          "type": "Number"
+        },
+        "Id": {
+          "type": "Number",
+          "id": 1
+        },
+        "StartTemperature": {
+          "type": "Number"
+        },
+        "AnswersFormId": {
+          "type": "String"
+        },
+        "EndTemperature": {
+          "type": "Number"
+        }
+      },
+      "hasMany": {
+        "Answers": {
+          "tableName": "Answers",
+          "schema": "dbo",
+          "primaryKey": "Id",
+          "foreignKey": "VisitId"
+        }
+      },
+      "belongsTo": {
+        "User": {
+          "tableName": "Users",
+          "schema": "dbo",
+          "primaryKey": "Id",
+          "foreignKey": "UserId"
+        }
+      }
+    },
+    "EmployeeSchedule": {
+      "name": "EmployeeSchedule",
+      "schema": "dbo",
+      "properties": {
+        "UserID": {
+          "type": "Number"
+        },
+        "LocationCode": {
+          "type": "String"
+        },
+        "ScheduleDate": {
+          "type": "String"
+        },
+        "SelectedShift": {
+          "type": "Number"
+        }
+      }
+    },
+    "DailyLimit": {
+      "name": "DailyLimit",
+      "schema": "dbo",
+      "properties": {
+        "LocationCode": {
+          "type": "String"
+        },
+        "ScheduleDate": {
+          "type": "String"
+        },
+        "MaxAllowed": {
+          "type": "Number"
+        },
+        "Available": {
+          "type": "Number"
+        }
+      }
+    },
+    "Mapping_Information": {
+      "name": "Mapping_Information",
+      "schema": "dbo",
+      "properties": {
+        "Floor_No": {
+          "type": "String"
+        },
+        "No_of_Rows": {
+          "type": "String"
+        },
+        "No_of_Columns": {
+          "type": "String"
+        },
+        "UnUsable_Desk": {
+          "type": "String"
+        }
+      }
+    },
+    "Desk": {
+      "name": "Desk",
+      "schema": "dbo",
+      "properties": {
+        "DeskID": {
+          "type": "String",
+          "id": 1
+        },
+        "FloorID": {
+          "type": "String"
+        },
+        "LocationID": {
+          "type": "String"
+        },
+        "Description": {
+          "type": "String"
+        }
+      }
+    },
+    "DeskBooking": {
+      "name": "DeskBooking",
+      "schema": "dbo",
+      "properties": {
+        "DeskID": {
+          "type": "String",
+          "id": 1
+        },
+        "FloorID": {
+          "type": "String",
+          "id": 2
+        },
+        "BookedForEmpID": {
+          "type": "String",
+          "id": 4
+        },
+        "Date": {
+          "type": "Date"
+        },
+        "FromTime": {
+          "type": "String"
+        },
+        "ToTime": {
+          "type": "String"
+        },
+        "BookedByEmpID": {
+          "type": "String",
+          "id": 3
+        },
+        "Snack": {
+          "type": "Boolean"
+        },
+        "Lunch": {
+          "type": "Boolean"
+        },
+        "RowID": {
+          "type": "String"
+        },
+        "ColumnID": {
+          "type": "String"
+        }
+      }
+    },
+    "VehicleParkingBooking": {
+      "name": "VehicleParkingBooking",
+      "schema": "dbo",
+      "properties": {
+        "VehicleParkingID": {
+          "type": "String",
+          "id": 1
+        },
+        "LevelID": {
+          "type": "String",
+          "id": 2
+        },
+        "Date": {
+          "type": "Date",
+          "id": 3
+        },
+        "FromTime": {
+          "type": "Date"
+        },
+        "ToTime": {
+          "type": "Date"
+        },
+        "EmpID": {
+          "type": "String"
+        },
+        "VehicleNumber": {
+          "type": "String"
+        }
+      }
+    },
+    "VehicleParking": {
+      "name": "VehicleParking",
+      "schema": "dbo",
+      "properties": {
+        "VehicleParkingID": {
+          "type": "String",
+          "id": 1
+        },
+        "LevelID": {
+          "type": "String"
+        },
+        "LocationID": {
+          "type": "String"
+        },
+        "Description": {
+          "type": "String"
+        }
+      }
+    },
+    "Radiobutton": {
+      "name": "Radiobutton",
+      "schema": "dbo",
+      "properties": {
+        "radiolabel": {
+          "type": "String"
+        },
+        "radiovalue": {
+          "type": "Number"
+        }
+      }
+    },
+    "DeskInformation": {
+      "name": "DeskInformation",
+      "schema": "dbo",
+      "properties": {
+        "DeskID": {
+          "type": "String",
+          "id": 1
+        },
+        "FloorNo": {
+          "type": "String"
+        },
+        "RowNo": {
+          "type": "String"
+        },
+        "ColumnNo": {
+          "type": "String"
+        },
+        "UnusedDesk": {
+          "type": "String"
+        },
+        "Description": {
+          "type": "String"
+        }
+      }
+    }
+  }
+}

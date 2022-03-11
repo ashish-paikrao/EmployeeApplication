@@ -1,0 +1,19 @@
+{
+  "method": "insert",
+  "table": "EmploeeSchedule",
+  "schema": "dbo",
+  "name": "INSERT_into_fullday_weeks",
+  "input": {
+    "User_id": "{userid}",
+    "Mon1": "{Days}",
+    "Mon2": "{Days1}",
+    "Tue1": "{Days2}",
+    "Tue2": "{Days3}",
+    "Wed1": "{Days4}",
+    "Wed2": "{Days5}",
+    "Thu1": "{Days6}",
+    "Thu2": "{Days7}",
+    "Fri1": "{Days8}",
+    "Fri2": "{Days9}"
+  }
+}

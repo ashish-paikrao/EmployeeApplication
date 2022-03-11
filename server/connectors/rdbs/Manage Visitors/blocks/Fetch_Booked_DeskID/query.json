@@ -1,0 +1,18 @@
+{
+  "method": "select",
+  "table": "DeskBooking",
+  "schema": "dbo",
+  "name": "Fetch_Booked_DeskID",
+  "where": {
+    "and": [
+      {
+        "FloorID": "{floorNo}"
+      },
+      {
+        "Date": "{selectedDate}"
+      }
+    ]
+  },
+  "include": [],
+  "orderDirection": "ASC"
+}

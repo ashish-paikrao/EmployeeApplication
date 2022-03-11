@@ -1,0 +1,19 @@
+{
+  "method": "insert",
+  "table": "DeskBooking",
+  "schema": "dbo",
+  "name": "bookdesk_for_me",
+  "input": {
+    "DeskID": "{selectedDesk}",
+    "FloorID": "{floorNo}",
+    "BookedForEmpID": "{UserId1}",
+    "Date": "{dateSelected}",
+    "FromTime": "10:00",
+    "ToTime": "05:00",
+    "BookedByEmpID": "{UserId}",
+    "Snack": "{snack}",
+    "Lunch": "{lunch}",
+    "RowID": "{selectedRow}",
+    "ColumnID": "{selectedColumn}"
+  }
+}

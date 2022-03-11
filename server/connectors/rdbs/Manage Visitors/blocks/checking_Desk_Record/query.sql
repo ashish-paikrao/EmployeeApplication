@@ -1,0 +1,1 @@
+select * from DeskBooking where DeskID=(?) AND FloorID =(?) ;

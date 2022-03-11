@@ -1,0 +1,11 @@
+{
+  "method": "select",
+  "table": "EmployeeTemperatures",
+  "schema": "dbo",
+  "name": "Get_Employee_Temperature_By_FormId",
+  "where": {
+    "AnswersFormId": "{formId}"
+  },
+  "include": [],
+  "orderDirection": "ASC"
+}

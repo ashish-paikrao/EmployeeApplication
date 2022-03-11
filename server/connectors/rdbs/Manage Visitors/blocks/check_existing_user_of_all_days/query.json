@@ -1,0 +1,60 @@
+{
+  "method": "select",
+  "table": "EmployeeSchedule",
+  "schema": "dbo",
+  "name": "check_existing_user_of_all_days",
+  "where": {
+    "and": [
+      {
+        "UserID": "{User_id}"
+      },
+      {
+        "and": [
+          {
+            "LocationCode": "{Loactioncode}"
+          },
+          {
+            "and": [
+              {
+                "ScheduleDate": "{Mon}"
+              },
+              {
+                "and": [
+                  {
+                    "ScheduleDate": "{Tue}"
+                  },
+                  {
+                    "and": [
+                      {
+                        "ScheduleDate": "{Wen}"
+                      },
+                      {
+                        "and": [
+                          {
+                            "ScheduleDate": "{Thu}"
+                          },
+                          {
+                            "and": [
+                              {
+                                "ScheduleDate": "{Fri}"
+                              },
+                              {
+                                "SelectedShift": "{selectedshift}"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "include": [],
+  "orderDirection": "ASC"
+}

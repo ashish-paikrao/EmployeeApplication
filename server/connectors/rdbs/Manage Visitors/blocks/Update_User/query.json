@@ -1,0 +1,18 @@
+{
+  "method": "update",
+  "table": "Users",
+  "schema": "dbo",
+  "name": "Update_User",
+  "input": {
+    "Email": "{email}",
+    "Name": "{name}",
+    "Phone": "{phone}",
+    "Address": "{address}",
+    "Latitude": "{latitude}",
+    "Longitude": "{longitude}",
+    "EmployeeId": "{employeeId}"
+  },
+  "where": {
+    "Id": "{id}"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "method": "select",
+  "table": "DailyLimit",
+  "schema": "dbo",
+  "name": "Check_in_dailylimit",
+  "where": {
+    "and": [
+      {
+        "LocationCode": "{Loactioncode}"
+      },
+      {
+        "ScheduleDate": "{selecteddate}"
+      }
+    ]
+  },
+  "include": [],
+  "orderDirection": "ASC"
+}

@@ -1,0 +1,12 @@
+{
+  "method": "update",
+  "table": "EmployeeSchedule",
+  "schema": "dbo",
+  "name": "UPDATE_EmployeeSchedule",
+  "input": {
+    "ScheduleDate": "{Thu}"
+  },
+  "where": {
+    "UserID": "{User_id}"
+  }
+}

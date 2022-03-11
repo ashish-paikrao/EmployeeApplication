@@ -1,0 +1,9 @@
+{
+  "id": "customSettingsSchema",
+  "name": "customSettingsSchema",
+  "type": "object",
+  "properties": {},
+  "arrayId": "customSettingsSchema",
+  "path": "",
+  "arrayPath": ""
+}

@@ -1,0 +1,38 @@
+<ion-header data-comp-id="header.1" style="height: auto; background: #28282a; box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.5);">
+    <ion-navbar data-comp-id="navbar.1" mode="ios" style color="transparent">
+        <button (click)="go('dashboard')" color="transparent" data-comp-id="button.1" icon-only ion-button mode="ios" style>
+            <ion-icon class=" ion-ios-arrow-round-back-outline" color="primary" style="font-size: 34px; padding: 0px 16px;"></ion-icon>
+        </button>
+        <ion-title data-comp-id="title.1" mode="ios"></ion-title>
+        <ion-buttons data-comp-id="buttons.1" end></ion-buttons>
+    </ion-navbar>
+    <div data-comp-id="div.1" style="padding: 0 16px 0;">
+        <div data-comp-id="text.1" ion-text style="font-size: 34px; text-align: left; margin: 0 0 13px;" color="white">History</div>
+        <ion-list data-comp-id="list.1" mode="ios" no-lines style="margin: 0 0 15px;">
+            <ion-item data-comp-id="input.1" class="search">
+                <ion-icon item-left class=" ion-ios-search-outline"></ion-icon>
+                <ion-input type="text" placeholder="Search" [(ngModel)]="data.searchValue" (input)="search()"></ion-input>
+            </ion-item>
+        </ion-list>
+    </div>
+</ion-header>
+<ion-content #content class="content-coal" data-comp-id="content.1" style>
+    <div
+        data-comp-id="div.2" style="padding: 18px 16px;">
+        <!-- <ion-title data-comp-id="title.2">
+                                                                                                                                                            <ion-searchbar type="search" data-comp-id="searchbar.1" [(ngModel)]="data.searchValue" mode="ios" style="background-color: #3b3b3c;"></ion-searchbar>
+                                                                                                                                                        </ion-title> -->
+        <ion-list data-comp-id="list.2" style="margin: 0;">
+            <ion-item data-comp-id="item.1" color="medium" style="padding: 0px 0px 0px 22px; border-radius: 6px; margin: 0 0 6px;" mode="ios" no-lines *ngFor="let item of data.userBooking; let i = index">
+                <div data-comp-id="div.3">
+                    <div data-comp-id="div.4" style="display: flex; justify-content: space-between; align-items: center;">
+                        <div ion-text data-comp-id="text.2" style="font-size: 17px; line-height: 22px;" color="primary" [innerHTML]="item.username"></div>
+                        <div ion-text data-comp-id="text.3" style="font-size: 12px; opacity: 0.7; line-height: 22px;" color="white" [innerHTML]="item.date ? item.date : 'No date'"></div>
+                    </div>
+                    <div ion-text data-comp-id="text.4" style="font-size: 13px; line-height: 22px;" color="white" [innerHTML]="item.userName"></div>
+                </div>
+                <!-- <ion-icon data-comp-id="icon.3" class=" ion-ios-arrow-forward-outline" style="font-size: 20px; opacity: 0.7; padding: 4px 0; color: #d1d1d6;" color="white" item-end></ion-icon> -->
+            </ion-item>
+        </ion-list>
+    </div>
+</ion-content>

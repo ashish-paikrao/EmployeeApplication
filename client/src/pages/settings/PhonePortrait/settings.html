@@ -1,0 +1,35 @@
+<ion-header data-comp-id="header.1" style="padding: 0; margin: 0; height: auto;">
+    <ion-navbar color="black" data-comp-id="navbar.1" mode="ios" style>
+        <ion-row data-comp-id="row.1" style="padding: 0 0 4px;">
+            <ion-col data-comp-id="column.1" style="text-align: left; padding: 0 4px;">
+                <button (click)="dismissModal()" class="button-label-primary" clear data-comp-id="button.1" ion-button mode="ios" small style="font-size: 17px; padding: 0 4px; margin: 0 2px; float: right;">
+                    <span style="padding: 0 0 0 8px;">Close</span>
+                </button>
+            </ion-col>
+            <ion-col col-12 data-comp-id="column.2" style="padding: 0 16px 4px 16px;">
+                <div class="article-title-big" color="white" data-comp-id="text.1" ion-text style="font-size: 34px; white-space: nowrap;">Settings</div>
+            </ion-col>
+        </ion-row>
+    </ion-navbar>
+</ion-header>
+<ion-content class="content-coal" data-comp-id="content.1" style>
+    <ion-row class="row-white" data-comp-id="row.2" style="margin: 0px; padding: 0px;">
+        <ion-col data-comp-id="column.3" style="padding: 0px;" class="column-medium">
+            <ion-list data-comp-id="list.1" style="margin: 0px;">
+                <div data-comp-id="touchid-enable-toggle.1">
+                    <ion-item data-comp-id="toggle.1" no-lines color="coal" style="margin: 0px 0px;">
+                        <ion-label color="white" style>Enable
+                            {{ getBiometricAuthType() }}</ion-label>
+                        <ion-toggle (ionChange)="toggleTouchid($event)" [checked]="touchidEnabled()" color="primary" style></ion-toggle>
+                    </ion-item>
+                    <ion-row data-comp-id="row.3" style="border-bottom: 1px solid rgb(44, 44, 46);">
+                        <ion-col data-comp-id="column.4" style="padding: 0px 15px 15px;" class="column-coal">
+                            <div color="white" data-comp-id="text.2" ion-text style="width: 80%; line-height: 1.5em;">All
+                                {{ getBiometricAuthType() }}s stored on this device can be used to log into this app.</div>
+                        </ion-col>
+                    </ion-row>
+                </div>
+            </ion-list>
+        </ion-col>
+    </ion-row>
+</ion-content>

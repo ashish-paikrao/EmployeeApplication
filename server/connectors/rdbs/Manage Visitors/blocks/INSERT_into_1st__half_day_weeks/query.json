@@ -1,0 +1,24 @@
+{
+  "advanced": true,
+  "params": [
+    "{userid}",
+    "{Days}",
+    "",
+    "{Days2}",
+    "",
+    "{Days4}",
+    "",
+    "{Days6}",
+    "",
+    "{Days8}",
+    ""
+  ],
+  "output": {
+    "type": "array",
+    "items": {
+      "type": "undefined"
+    },
+    "id": "results"
+  },
+  "name": "INSERT_into_1st__half_day_weeks"
+}

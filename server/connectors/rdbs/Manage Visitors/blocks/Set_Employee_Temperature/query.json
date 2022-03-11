@@ -1,0 +1,12 @@
+{
+  "method": "insert",
+  "table": "EmployeeTemperatures",
+  "schema": "dbo",
+  "name": "Set_Employee_Temperature",
+  "input": {
+    "UserId": "{userId}",
+    "AnswersFormId": "{formId}",
+    "Temperature": "{temperature}",
+    "Date": "{date}"
+  }
+}

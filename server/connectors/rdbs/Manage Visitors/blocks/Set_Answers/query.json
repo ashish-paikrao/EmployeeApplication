@@ -1,0 +1,14 @@
+{
+  "method": "insert",
+  "table": "Answers",
+  "schema": "dbo",
+  "name": "Set_Answers",
+  "input": {
+    "UserId": "{userId}",
+    "QuestionId": "{questionId}",
+    "Answer": "{answer}",
+    "VisitId": "{visitId}",
+    "Date": "{date}",
+    "FormId": "{formId}"
+  }
+}

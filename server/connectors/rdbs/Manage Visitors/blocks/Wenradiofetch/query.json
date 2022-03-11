@@ -1,0 +1,11 @@
+{
+  "method": "select",
+  "table": "EmploeeSchedule",
+  "schema": "dbo",
+  "name": "Wenradiofetch",
+  "where": {
+    "User_id": "{User_id}"
+  },
+  "include": [],
+  "orderDirection": "ASC"
+}

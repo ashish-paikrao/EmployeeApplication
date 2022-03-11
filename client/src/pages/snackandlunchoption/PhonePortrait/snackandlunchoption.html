@@ -1,0 +1,73 @@
+<ion-card data-comp-id="card.1" color="black" style="padding: 10% 2px 0px; margin: 15% 3%;">
+    <span ion-text data-comp-id="text.1" style="padding: 0px 0px 0px 10px;">Selected desk is</span>
+    <span ion-text data-comp-id="text.2" [innerHTML]="'F'+global.floor" style="padding: 0px 0px 0px 10px;"></span>
+    <span ion-text data-comp-id="text.3" [innerHTML]="'R'+global.row"></span>
+    <span ion-text data-comp-id="text.4" [innerHTML]="'C'+global.column"></span>
+    <ion-list data-comp-id="list.1" class="list-container-coal">
+        <ion-item data-comp-id="checkbox.1" color="coal" style="margin: 10px 0px 0px 8px;">
+            <ion-label style="font-style: normal;">Select meal</ion-label>
+            <ion-checkbox [(ngModel)]="data.Meal" color="primary" style></ion-checkbox>
+        </ion-item>
+        <ion-card-content data-comp-id="card-content.1" class="card-content-coal" style="margin: 0px; padding: 5px 8px;" *ngIf="data.Meal==true">
+            <ion-list data-comp-id="list.2" style class="list-container-medium">
+                <ion-item data-comp-id="checkbox.2" style="border-bottom: 1px solid;" color="medium">
+                    <ion-label>Snack</ion-label>
+                    <ion-checkbox [(ngModel)]="data.snack"></ion-checkbox>
+                </ion-item>
+            </ion-list>
+            <ion-list data-comp-id="list.3" fixed>
+                <ion-item data-comp-id="checkbox.3" color="medium" style>
+                    <ion-label>Lunch</ion-label>
+                    <ion-checkbox [(ngModel)]="data.lunch"></ion-checkbox>
+                </ion-item>
+            </ion-list>
+        </ion-card-content>
+    </ion-list>
+    <ion-card-content data-comp-id="card-content.2" style="padding: 5px 8px; margin: 0px;" class="card-content-coal">
+        <ion-list data-comp-id="list.4">
+            <ion-item data-comp-id="checkbox.4" color="coal" style>
+                <ion-label>Book for other</ion-label>
+                <ion-checkbox [(ngModel)]="data.Bookforother"></ion-checkbox>
+            </ion-item>
+        </ion-list>
+        <div
+            data-comp-id="div.1" style="padding: 18px 16px;" *ngIf="data.Bookforother==true">
+            <!-- <ion-title data-comp-id="title.2">
+                                                                                                                                                                                                                                                                                                                                                                                                                                        <ion-searchbar type="search" data-comp-id="searchbar.1" [(ngModel)]="data.searchValue" mode="ios" style="background-color: #3b3b3c;"></ion-searchbar>
+                                                                                                                                                                                                                                                                                                                                                                                                                                    </ion-title> -->
+            <ion-list data-comp-id="list.5" mode="ios" no-lines style="margin: 0 0 15px;">
+                <ion-item data-comp-id="input.1" class="search" color="coal" style>
+                    <ion-icon item-left class=" ion-ios-search-outline"></ion-icon>
+                    <ion-input type="text" placeholder="Search" [(ngModel)]="data.searchValue" (input)="search()"></ion-input>
+                </ion-item>
+            </ion-list>
+            <ion-list data-comp-id="list.6" style="margin: 0;">
+                <ion-item data-comp-id="item.1" color="medium" style="padding: 0px 0px 0px 22px; border-radius: 6px; margin: 0 0 6px;" mode="ios" no-lines *ngFor="let item of data.userBooking; let i = index" (click)="adduser(i)">
+                    <div data-comp-id="div.2">
+                        <div data-comp-id="div.3" style="display: flex; justify-content: space-between; align-items: center;">
+                            <div ion-text data-comp-id="text.5" style="font-size: 17px; line-height: 22px;" color="primary" [innerHTML]="item.username"></div>
+                        </div>
+                        <span ion-text data-comp-id="text.6" style="font-size: 13px; line-height: 22px;" color="white" [innerHTML]="item.userName"></span>
+                        <ion-icon style="font-size: 28px; float: right;" data-comp-id="icon.1" class=" ion-ios-checkmark-circle" color="primary" *ngIf="this.data.Book_for_other_userID == item.userID"></ion-icon>
+                    </div>
+                    <!-- <ion-icon data-comp-id="icon.3" class=" ion-ios-arrow-forward-outline" style="font-size: 20px; opacity: 0.7; padding: 4px 0; color: #d1d1d6;" color="white" item-end></ion-icon> -->
+                </ion-item>
+            </ion-list>
+        </div>
+        <!-- <include-screen name="history" [(data)]="data" data-comp-id="include-screen.1" *ngIf="data.Bookforother==true"></include-screen> -->
+    </ion-card-content>
+    <ion-footer data-comp-id="footer.1" *ngIf="data.Meal == 1 || data.Bookforother== 1">
+        <ion-row data-comp-id="row.1" *ngIf="data.Meal == 1 || data.Bookforother== 1">
+            <ion-col data-comp-id="column.1" (click)="dismissModal()" class="column-medium" style="text-align: center;">
+                <button data-comp-id="button.1" style="background-image: linear-gradient(to top, #2578a1, null);" (click)="action('confirm')" ion-button>
+                    <span>Confirm</span>
+                </button>
+            </ion-col>
+            <ion-col data-comp-id="column.2" (click)="dismissModal()" class="column-medium" style="text-align: center;">
+                <button data-comp-id="button.2" ion-button style color="light" (click)="action('cancel')">
+                    <span>Cancel</span>
+                </button>
+            </ion-col>
+        </ion-row>
+    </ion-footer>
+</ion-card>

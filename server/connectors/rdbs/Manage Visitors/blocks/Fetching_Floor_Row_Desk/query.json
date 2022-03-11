@@ -1,0 +1,28 @@
+{
+  "advanced": true,
+  "params": [
+    "{selectedFloor}"
+  ],
+  "output": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "Floor_No": {
+          "type": "string"
+        },
+        "No_of_Rows": {
+          "type": "string"
+        },
+        "No_of_Columns": {
+          "type": "string"
+        },
+        "UnUsable_Desk": {
+          "type": "string"
+        }
+      }
+    },
+    "id": "results"
+  },
+  "name": "Fetching_Floor_Row_Desk"
+}

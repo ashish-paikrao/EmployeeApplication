@@ -1,0 +1,18 @@
+{
+  "advanced": true,
+  "params": [
+    null,
+    ""
+  ],
+  "output": {
+    "type": "object",
+    "id": "results",
+    "properties": {
+      "count": {
+        "id": "count",
+        "type": "number"
+      }
+    }
+  },
+  "name": "UPDATE_DailyLimit"
+}

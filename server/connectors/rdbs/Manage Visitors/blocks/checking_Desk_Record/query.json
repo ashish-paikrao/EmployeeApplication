@@ -1,0 +1,11 @@
+{
+  "method": "select",
+  "table": "DeskBooking",
+  "schema": "dbo",
+  "name": "checking_Desk_Record",
+  "where": {
+    "DeskID": "{selectedDesk}"
+  },
+  "include": [],
+  "orderDirection": "ASC"
+}

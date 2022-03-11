@@ -1,0 +1,22 @@
+{
+  "userBooking": [
+    {
+      "userName": "Mike Smith",
+      "userID": 54,
+      "contact": 7249532221
+    },
+    {
+      "userName": "Vedant",
+      "userID": 4,
+      "contact": 72432221
+    },
+    {
+      "userName": "Mike",
+      "userID": 44,
+      "contact": 9532221
+    }
+  ],
+  "checkingDeskRecord": [],
+  "Meal": false,
+  "Bookforother": true
+}

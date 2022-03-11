@@ -1,0 +1,23 @@
+{
+  "advanced": true,
+  "params": [
+    "{Available}",
+    "{Loactioncode}",
+    "{Mon}",
+    "{Tue}",
+    "{Wen}",
+    "{Thu}",
+    "{Fri}"
+  ],
+  "output": {
+    "type": "object",
+    "id": "results",
+    "properties": {
+      "count": {
+        "id": "count",
+        "type": "number"
+      }
+    }
+  },
+  "name": "UPDATE_DailyLimit2"
+}

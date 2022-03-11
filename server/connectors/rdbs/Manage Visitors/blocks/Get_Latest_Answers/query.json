@@ -1,0 +1,43 @@
+{
+  "advanced": true,
+  "params": [
+    "{userId}"
+  ],
+  "output": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "UserId": {
+          "type": "number"
+        },
+        "QuestionId": {
+          "type": "number"
+        },
+        "Answer": {
+          "type": "string"
+        },
+        "VisitId": {
+          "type": "string"
+        },
+        "Id": {
+          "type": "number"
+        },
+        "Date": {
+          "type": "date"
+        },
+        "FormId": {
+          "type": "string"
+        },
+        "_key": {
+          "type": "number"
+        },
+        "Temperature": {
+          "type": "number"
+        }
+      }
+    },
+    "id": "results"
+  },
+  "name": "Get_Latest_Answers"
+}

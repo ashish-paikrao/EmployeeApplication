@@ -1,0 +1,52 @@
+{
+  "advanced": true,
+  "params": [
+    "{formId}"
+  ],
+  "output": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "UserId": {
+          "type": "number"
+        },
+        "QuestionId": {
+          "type": "number"
+        },
+        "Answer": {
+          "type": "string"
+        },
+        "VisitId": {
+          "type": "string"
+        },
+        "Id": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "Date": {
+          "type": "date"
+        },
+        "FormId": {
+          "type": "string"
+        },
+        "Text": {
+          "type": "string"
+        },
+        "Type": {
+          "type": "string"
+        },
+        "Index": {
+          "type": "number"
+        },
+        "IsRequired": {
+          "type": "string"
+        }
+      }
+    },
+    "id": "results"
+  },
+  "name": "Get_Answers_By_FormID"
+}

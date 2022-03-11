@@ -1,0 +1,21 @@
+{
+  "advanced": true,
+  "params": [
+    "{User_id}",
+    "{Loactioncode1}",
+    "{Mon}",
+    "{selectedshift}",
+    "{User_id1}",
+    "{Loactioncode}",
+    "{Tue}",
+    "{selectedshift1}"
+  ],
+  "output": {
+    "type": "array",
+    "items": {
+      "type": "undefined"
+    },
+    "id": "results"
+  },
+  "name": "INSERT_EmployeeSchedule2"
+}

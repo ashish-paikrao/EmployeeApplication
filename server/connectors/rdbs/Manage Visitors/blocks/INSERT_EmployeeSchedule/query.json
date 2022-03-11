@@ -1,0 +1,17 @@
+{
+  "advanced": true,
+  "params": [
+    "{User_id}",
+    "1",
+    "{Thu}",
+    "1"
+  ],
+  "output": {
+    "type": "array",
+    "items": {
+      "type": "undefined"
+    },
+    "id": "results"
+  },
+  "name": "INSERT_EmployeeSchedule"
+}

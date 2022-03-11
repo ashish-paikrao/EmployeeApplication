@@ -1,0 +1,866 @@
+{
+  "menu": {
+    "type": "object",
+    "properties": {
+      "schedulescreen": {
+        "type": "action"
+      }
+    },
+    "id": "menu"
+  },
+  "home": {
+    "type": "object",
+    "comment": "Blank",
+    "properties": {
+      "qrCode": {
+        "type": "string"
+      },
+      "announcements": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "Title": {
+              "type": "string"
+            },
+            "Details": {
+              "type": "string"
+            },
+            "DateCreated": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "latestTemperature": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string"
+          },
+          "value": {
+            "type": "number"
+          }
+        }
+      },
+      "latestAnswers": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string"
+          }
+        }
+      },
+      "refresh": {
+        "type": "action"
+      },
+      "latestAnswerFormId": {
+        "type": "string"
+      },
+      "showAnswers": {
+        "type": "action"
+      }
+    },
+    "id": "home"
+  },
+  "profile": {
+    "type": "object",
+    "comment": "Blank",
+    "properties": {
+      "user": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string"
+          },
+          "employeeId": {
+            "type": "string"
+          },
+          "latitude": {
+            "type": "string"
+          },
+          "longitude": {
+            "type": "string"
+          }
+        }
+      },
+      "done": {
+        "type": "action",
+        "parameters": {}
+      },
+      "cantGoBack": {
+        "type": "boolean"
+      }
+    },
+    "id": "profile"
+  },
+  "question": {
+    "type": "object",
+    "comment": "Blank",
+    "properties": {
+      "submit": {
+        "type": "action"
+      },
+      "questions": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "answer": {
+              "type": "boolean"
+            },
+            "Text": {
+              "type": "string"
+            },
+            "Id": {
+              "type": "string"
+            },
+            "ParentId": {
+              "type": "number"
+            }
+          }
+        }
+      },
+      "temperature": {
+        "type": "number"
+      },
+      "today": {
+        "type": "string"
+      },
+      "topLevelQuestions": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "Text": {
+              "type": "string"
+            },
+            "answer": {
+              "type": "boolean"
+            },
+            "Id": {
+              "type": "string"
+            },
+            "IsParent": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "id": "question"
+  },
+  "login": {
+    "type": "object",
+    "comment": "Blank",
+    "properties": {
+      "email": {
+        "type": "string"
+      },
+      "password": {
+        "type": "string"
+      },
+      "submit": {
+        "type": "action"
+      },
+      "isError": {
+        "type": "boolean"
+      }
+    },
+    "id": "login"
+  },
+  "mytemperature": {
+    "type": "object",
+    "comment": "Blank",
+    "properties": {
+      "temperatures": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "date": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "id": "mytemperature"
+  },
+  "settings": {
+    "type": "object",
+    "comment": "Blank",
+    "properties": {
+      "back": {
+        "type": "action"
+      },
+      "notificationsEnabled": {
+        "type": "boolean"
+      },
+      "toggleNotifications": {
+        "type": "action"
+      }
+    },
+    "id": "settings"
+  },
+  "mapview": {
+    "type": "object",
+    "comment": "Blank",
+    "properties": {
+      "mapInput": {
+        "type": "object",
+        "properties": {
+          "Latitude": {
+            "type": "string"
+          },
+          "Longitude": {
+            "type": "string"
+          },
+          "Address": {
+            "type": "string"
+          }
+        }
+      },
+      "AddressSearch": {
+        "type": "string"
+      },
+      "Longitude": {
+        "type": "string"
+      },
+      "Latitude": {
+        "type": "string"
+      },
+      "Address": {
+        "type": "string"
+      }
+    },
+    "id": "mapview"
+  },
+  "answers": {
+    "type": "object",
+    "comment": "Blank",
+    "properties": {
+      "home": {
+        "type": "action"
+      },
+      "back": {
+        "type": "action"
+      },
+      "questions": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "answer": {
+              "type": "boolean"
+            },
+            "Text": {
+              "type": "string"
+            },
+            "Answer": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "temperature": {
+        "type": "string"
+      },
+      "today": {
+        "type": "string"
+      },
+      "employee": {
+        "type": "object",
+        "properties": {
+          "Phone": {
+            "type": "string"
+          },
+          "Name": {
+            "type": "string"
+          },
+          "test": {
+            "type": "string"
+          },
+          "Id": {
+            "type": "string"
+          }
+        }
+      },
+      "submit": {
+        "type": "action"
+      },
+      "VisitId": {
+        "type": "number"
+      },
+      "exitedByThisVisitId": {
+        "type": "boolean"
+      },
+      "topLevelQuestions": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "Answer": {
+              "type": "string"
+            },
+            "Text": {
+              "type": "string"
+            },
+            "answer": {
+              "type": "boolean"
+            },
+            "IsParent": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "id": "answers"
+  },
+  "oauthlogin": {
+    "type": "object",
+    "comment": "Login",
+    "properties": {
+      "login": {
+        "type": "action",
+        "parameters": {
+          "username": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          }
+        }
+      },
+      "authorizeUrl": {
+        "type": "string"
+      }
+    },
+    "id": "oauthlogin"
+  },
+  "oauthloginv2": {
+    "type": "object",
+    "comment": "Blank",
+    "properties": {
+      "login": {
+        "type": "action"
+      },
+      "authorizeUrl": {
+        "type": "string"
+      }
+    },
+    "id": "oauthloginv2"
+  },
+  "schedule": {
+    "type": "object",
+    "comment": "Blank",
+    "properties": {
+      "Submit": {
+        "type": "action"
+      },
+      "dateandtime": {
+        "type": "string"
+      },
+      "Days": {
+        "type": "string"
+      },
+      "User_id": {
+        "type": "number"
+      },
+      "sameforalldayssubmit": {
+        "type": "action"
+      },
+      "highlightradiobutton": {
+        "type": "string"
+      },
+      "firsthalf": {
+        "type": "number"
+      },
+      "secondhalf": {
+        "type": "number"
+      },
+      "radioValue": {
+        "type": "number"
+      },
+      "display": {
+        "type": "action"
+      },
+      "timeout": {
+        "type": "number"
+      },
+      "checkuser": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "User_id": {
+              "type": "number"
+            }
+          }
+        }
+      },
+      "Sameforallweeks": {
+        "type": "boolean"
+      },
+      "Weeks": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "Montext": {
+              "type": "number"
+            },
+            "Tuetext": {
+              "type": "number"
+            }
+          }
+        }
+      }
+    },
+    "id": "schedule"
+  },
+  "homelogin": {
+    "type": "object",
+    "comment": "Blank",
+    "properties": {
+      "StartDate": {
+        "type": "number"
+      },
+      "EndDate": {
+        "type": "number"
+      },
+      "Mon": {
+        "type": "string"
+      },
+      "Tue": {
+        "type": "string"
+      },
+      "Wen": {
+        "type": "string"
+      },
+      "Thu": {
+        "type": "string"
+      },
+      "Fri": {
+        "type": "string"
+      },
+      "Sat": {
+        "type": "string"
+      },
+      "Sun": {
+        "type": "string"
+      },
+      "Submit": {
+        "type": "action"
+      },
+      "User_id": {
+        "type": "number"
+      },
+      "Days": {
+        "type": "string"
+      },
+      "selecteddate": {
+        "type": "string"
+      },
+      "selectedshift": {
+        "type": "number"
+      },
+      "Loactioncode": {
+        "type": "string"
+      },
+      "sameforalldays": {
+        "type": "boolean"
+      },
+      "sameforallday": {
+        "type": "action"
+      },
+      "CheckExistingrecord": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "UserID": {
+              "type": "number"
+            },
+            "LocationCode": {
+              "type": "string"
+            },
+            "SelectedShift": {
+              "type": "number"
+            },
+            "ScheduleDate": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "dailylimitformultipledays": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "Available": {
+              "type": "number"
+            },
+            "ScheduleDate": {
+              "type": "string"
+            },
+            "MaxAllowed": {
+              "type": "number"
+            },
+            "LocationCode": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "AvailableEntries": {
+        "type": "object",
+        "properties": {
+          "day1": {
+            "type": "string"
+          },
+          "day2": {
+            "type": "string"
+          },
+          "day3": {
+            "type": "string"
+          },
+          "day4": {
+            "type": "string"
+          },
+          "day5": {
+            "type": "string"
+          }
+        }
+      },
+      "onewayavailable": {
+        "type": "number"
+      }
+    },
+    "id": "homelogin"
+  },
+  "bookingsytem": {
+    "type": "object",
+    "comment": "Blank",
+    "properties": {
+      "floorNo": {
+        "type": "string"
+      },
+      "totalFloor": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "floorNo": {
+              "type": "string"
+            },
+            "floorID": {
+              "type": "string"
+            },
+            "floorClick": {
+              "type": "action"
+            }
+          }
+        }
+      },
+      "selectedDate": {
+        "type": "date",
+        "format": "YYYY-MM-DD"
+      }
+    },
+    "id": "bookingsytem"
+  },
+  "floor2": {
+    "type": "object",
+    "comment": "Blank",
+    "properties": {
+      "rowList": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "colList": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "columnName": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "totalColumns": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "selectedDate": {
+        "type": "date",
+        "format": "YYYY-MM-DD"
+      },
+      "selectedFloor": {
+        "type": "string"
+      },
+      "getSnackandLunch": {
+        "type": "action"
+      },
+      "selectedDesk": {
+        "type": "string"
+      },
+      "selectedRow": {
+        "type": "string"
+      },
+      "selectedColumn": {
+        "type": "string"
+      },
+      "totalDesks": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "deskID": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "id": "floor2"
+  },
+  "snackandlunchoption": {
+    "type": "object",
+    "comment": "Blank",
+    "properties": {
+      "confirm": {
+        "type": "action"
+      },
+      "cancel": {
+        "type": "action"
+      },
+      "snack": {
+        "type": "boolean"
+      },
+      "lunch": {
+        "type": "boolean"
+      },
+      "UserId": {
+        "type": "number"
+      },
+      "FromTime": {
+        "type": "string"
+      },
+      "ToTime": {
+        "type": "string"
+      },
+      "checkingDeskRecord": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "FloorID": {
+              "type": "string"
+            },
+            "checkingDeskID": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "Meal": {
+        "type": "boolean"
+      },
+      "Bookforme": {
+        "type": "boolean"
+      },
+      "Book": {
+        "type": "boolean"
+      },
+      "Bookforother": {
+        "type": "boolean"
+      },
+      "searchValue": {
+        "type": "string"
+      },
+      "userBooking": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "userName": {
+              "type": "string"
+            },
+            "userID": {
+              "type": "number"
+            },
+            "contact": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "Book_for_other_userID": {
+        "type": "number"
+      },
+      "selectedDesk": {
+        "type": "string"
+      }
+    },
+    "id": "snackandlunchoption"
+  },
+  "bookforother": {
+    "type": "object",
+    "comment": "Blank",
+    "properties": {
+      "user_Booking": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "user_name": {
+              "type": "string"
+            },
+            "user_id": {
+              "type": "number"
+            },
+            "contact": {
+              "type": "number"
+            }
+          }
+        }
+      },
+      "searchvalue": {
+        "type": "string"
+      }
+    },
+    "id": "bookforother"
+  },
+  "history": {
+    "type": "object",
+    "comment": "Blank",
+    "properties": {
+      "temperatures": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "date": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "username": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "searchValue": {
+        "type": "string"
+      },
+      "userBooking": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "userName": {
+              "type": "string"
+            },
+            "userID": {
+              "type": "number"
+            },
+            "contact": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "id": "history"
+  },
+  "deskinformation": {
+    "type": "object",
+    "comment": "Blank",
+    "properties": {
+      "deskInfo": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "deskID": {
+              "type": "string"
+            },
+            "deskRow": {
+              "type": "string"
+            },
+            "deskColumn": {
+              "type": "string"
+            },
+            "Floor": {
+              "type": "string"
+            },
+            "ocuupied": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "bookedInformation": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "deskID": {
+              "type": "string"
+            },
+            "bookingName": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "selectedFloor": {
+        "type": "string"
+      },
+      "selectedDesk": {
+        "type": "string"
+      },
+      "selectedColumn": {
+        "type": "string"
+      },
+      "selectedRow": {
+        "type": "string"
+      },
+      "dateSelected": {
+        "type": "date",
+        "format": "YYYY-MM-DD"
+      },
+      "passData": {
+        "type": "action"
+      },
+      "refreshContent": {
+        "type": "action"
+      },
+      "constantDate": {
+        "type": "string"
+      }
+    },
+    "id": "deskinformation"
+  }
+}

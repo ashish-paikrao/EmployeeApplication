@@ -1,0 +1,59 @@
+screen-answers-phoneportrait {
+    ion-item > .item-inner {
+        border-bottom: none !important;
+    }
+    .toolbar-title-ios {
+      font-size: 20px;
+      color: #ff8a65 !important;
+    }
+    .question-list-checkbox {
+        min-height: auto;
+        line-height: 14px;
+        margin-bottom: 12px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &.item-checkbox-disabled {
+            ion-label {
+                opacity: 1 !important;
+            }
+        }
+
+        .checkbox-ios {
+            margin: 0 8px 0 0 !important;
+
+            &.checkbox-disabled {
+                opacity: 1 !important;
+            }
+
+            .checkbox-icon {
+                background-color: transparent;
+                border-color: color($colors, primary);
+                width: 24px;
+                height: 24px;
+
+                &.checkbox-checked {
+                    background-color: color($colors, primary);
+                    border-color: color($colors, primary);
+
+                    .checkbox-inner {
+                        width: 6px;
+                        height: 11px;
+                        border-width: 2px;
+                        border-top-width: 0;
+                        border-left-width: 0;
+                        top: 4px;
+                        left: 8px;
+                        border-color: color($colors, white);
+                    }
+                }
+            }
+        }
+
+        .label-ios {
+            margin: 0;
+        }
+    }
+}

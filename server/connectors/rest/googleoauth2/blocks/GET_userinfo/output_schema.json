@@ -1,0 +1,106 @@
+{
+  "body": {
+    "type": "object",
+    "properties": {
+      "userInfo": {
+        "type": "object",
+        "properties": {
+          "resourceName": {
+            "type": "String",
+            "id": "body.userInfo.resourceName"
+          },
+          "etag": {
+            "type": "String",
+            "id": "body.userInfo.etag"
+          },
+          "names": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "metadata": {
+                  "type": "object",
+                  "properties": {
+                    "primary": {
+                      "type": "Boolean",
+                      "id": "body.userInfo.names.metadata.primary"
+                    },
+                    "source": {
+                      "type": "String",
+                      "id": "body.userInfo.names.metadata.source",
+                      "updateOnly": false
+                    }
+                  }
+                },
+                "displayName": {
+                  "type": "String",
+                  "id": "body.userInfo.names.displayName"
+                },
+                "familyName": {
+                  "type": "String",
+                  "id": "body.userInfo.names.familyName"
+                },
+                "givenName": {
+                  "type": "String",
+                  "id": "body.userInfo.names.givenName"
+                },
+                "displayNameLastFirst": {
+                  "type": "String",
+                  "id": "body.userInfo.names.displayNameLastFirst"
+                },
+                "unstructuredName": {
+                  "type": "String",
+                  "id": "body.userInfo.names.unstructuredName"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "headers": {
+    "type": "object",
+    "properties": {
+      "x-powered-by": {
+        "type": "String",
+        "id": "headers.x-powered-by"
+      },
+      "access-control-allow-origin": {
+        "type": "String",
+        "id": "headers.access-control-allow-origin"
+      },
+      "content-type": {
+        "type": "String",
+        "id": "headers.content-type"
+      },
+      "date": {
+        "type": "String",
+        "id": "headers.date"
+      },
+      "connection": {
+        "type": "String",
+        "id": "headers.connection"
+      },
+      "content-length": {
+        "type": "String",
+        "id": "headers.content-length"
+      }
+    }
+  },
+  "status": {
+    "type": "Number",
+    "id": "status"
+  },
+  "rawBody": {
+    "type": "String",
+    "body": "string",
+    "id": "rawBody"
+  },
+  "id": {
+    "type": "Number",
+    "id": "id",
+    "generated": true,
+    "updateOnly": true
+  }
+}

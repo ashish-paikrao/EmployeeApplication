@@ -1,0 +1,25 @@
+{
+  "method": "select",
+  "table": "EmployeeSchedule",
+  "schema": "dbo",
+  "name": "SELECT_EmployeeSchedule",
+  "where": {
+    "and": [
+      {
+        "UserID": "{User_id}"
+      },
+      {
+        "and": [
+          {
+            "ScheduleDate": "{selecteddate}"
+          },
+          {
+            "LocationCode": "{Loactioncode}"
+          }
+        ]
+      }
+    ]
+  },
+  "include": [],
+  "orderDirection": "ASC"
+}

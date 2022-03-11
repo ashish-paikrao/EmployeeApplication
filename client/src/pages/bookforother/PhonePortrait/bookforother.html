@@ -1,0 +1,16 @@
+<ion-card-content data-comp-id="card-content.1">
+    <div autocomplete style="padding: 20px; background-color:primary;" data-fieldName="searchvalue" [debouncePeriod]="600" (updateFieldAction)="updateField($event.fieldModel,$event.value, {}, {noLoading: true})" data-comp-id="autocomplete.1">
+        <div style="position: relative">
+            <ion-item>
+                <ion-input type="text" placeholder="Search..." (input)="data.searchvalue=$event.target.value"></ion-input>
+                <ion-icon data-comp-id="icon.1" name="search" item-end></ion-icon>
+            </ion-item>
+            <ion-list style="z-index: 2000;position: absolute; width: 100%">
+                <ion-item data-comp-id="item.1" *ngFor="let item of data.user_Booking; let i = index">
+                    <div data-comp-id="text.1" ion-text [innerHTML]="item.user_name"></div>
+                    <ion-icon data-comp-id="icon.2" class="ion-ios-arrow-forward" item-end></ion-icon>
+                </ion-item>
+            </ion-list>
+        </div>
+    </div>
+</ion-card-content>

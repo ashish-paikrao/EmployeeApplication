@@ -1,0 +1,17 @@
+{
+  "advanced": true,
+  "params": [],
+  "output": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "FloorNo": {
+          "type": "string"
+        }
+      }
+    },
+    "id": "results"
+  },
+  "name": "Select_Floor_No"
+}

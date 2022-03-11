@@ -1,0 +1,66 @@
+{
+  "advanced": true,
+  "params": [
+    "{User_id1}",
+    "0",
+    "1"
+  ],
+  "output": {
+    "schema": "dbo",
+    "table": "EmploeeSchedule",
+    "type": "object",
+    "properties": {
+      "User_id": {
+        "type": "Number"
+      },
+      "DateandTime": {
+        "type": "String"
+      },
+      "Mon1": {
+        "type": "Number"
+      },
+      "Mon2": {
+        "type": "Number"
+      },
+      "Tue1": {
+        "type": "Number"
+      },
+      "Tue2": {
+        "type": "Number"
+      },
+      "Wed1": {
+        "type": "Number"
+      },
+      "Wed2": {
+        "type": "Number"
+      },
+      "Thu1": {
+        "type": "Number"
+      },
+      "Thu2": {
+        "type": "Number"
+      },
+      "Fri1": {
+        "type": "Number"
+      },
+      "Fri2": {
+        "type": "Number"
+      },
+      "Sat1": {
+        "type": "Number"
+      },
+      "Sat2": {
+        "type": "Number"
+      },
+      "Sun1": {
+        "type": "Number"
+      },
+      "Sun2": {
+        "type": "Number"
+      }
+    },
+    "id": "results",
+    "label": "inserted record"
+  },
+  "name": "insert2nd_Fri"
+}

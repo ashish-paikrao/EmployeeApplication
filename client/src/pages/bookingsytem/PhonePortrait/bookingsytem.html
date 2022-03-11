@@ -1,0 +1,21 @@
+<ion-header data-comp-id="header.1">
+    <ion-navbar data-comp-id="navbar.1" color="medium" style>
+        <button data-comp-id="button.1" icon-only ion-button menuToggle>
+            <ion-icon class="ion-ios-menu"></ion-icon>
+        </button>
+        <ion-title data-comp-id="title.1">
+            <div data-comp-id="text.1" ion-text>Desk Booking</div>
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content data-comp-id="content.1" class="content-coal" style>
+    <ion-card data-comp-id="card.1" color="coal" style="width: 350.4px; padding: 0px; margin: 160px 12px 87px;" text-center text-capitalize float-left padding-right margin-bottom>
+        <ion-list data-comp-id="list.1" class="list-container-medium" style>
+            <ion-item data-comp-id="item.1" color="medium" style (click)="Gotofloorpage(i)" *ngFor="let item of data.totalFloor; let i = index">
+                <span data-comp-id="text.2" ion-text color="primary" style>Floor</span>
+                <span ion-text data-comp-id="text.3" [innerHTML]="item.floorNo"></span>
+                <ion-icon data-comp-id="icon.1" item-end name="arrow-forward" color="highlight" style></ion-icon>
+            </ion-item>
+        </ion-list>
+    </ion-card>
+</ion-content>

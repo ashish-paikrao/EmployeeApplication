@@ -1,0 +1,52 @@
+{
+  "advanced": true,
+  "params": [
+    "{email}"
+  ],
+  "output": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "Email": {
+          "type": "string"
+        },
+        "Password": {
+          "type": "string"
+        },
+        "Id": {
+          "type": "number"
+        },
+        "Role": {
+          "type": "string"
+        },
+        "Name": {
+          "type": "string"
+        },
+        "Phone": {
+          "type": "string"
+        },
+        "Address": {
+          "type": "string"
+        },
+        "EmployeeId": {
+          "type": "string"
+        },
+        "Latitude": {
+          "type": "number"
+        },
+        "Longitude": {
+          "type": "number"
+        },
+        "OAuthId": {
+          "type": "string"
+        },
+        "_key": {
+          "type": "number"
+        }
+      }
+    },
+    "id": "results"
+  },
+  "name": "Fetch_ID"
+}

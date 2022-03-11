@@ -1,0 +1,37 @@
+{
+  "advanced": true,
+  "params": [
+    "{userId}"
+  ],
+  "output": {
+    "schema": "dbo",
+    "table": "EmployeeTemperatures",
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "UserId": {
+          "type": "Number"
+        },
+        "AnswersFormId": {
+          "type": "String"
+        },
+        "Temperature": {
+          "type": "Number"
+        },
+        "Id": {
+          "type": "Number"
+        },
+        "User": {
+          "schema": "dbo",
+          "table": "Users",
+          "label": "User",
+          "type": "object",
+          "properties": {}
+        }
+      }
+    },
+    "id": "results"
+  },
+  "name": "Get_Employee_Temperatures_by_UserId"
+}

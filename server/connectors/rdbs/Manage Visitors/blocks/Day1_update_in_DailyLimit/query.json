@@ -1,0 +1,16 @@
+{
+  "advanced": true,
+  "params": [
+    "{day1}",
+    "{Loactioncode}",
+    "{Mon}"
+  ],
+  "output": {
+    "type": "array",
+    "items": {
+      "type": "undefined"
+    },
+    "id": "results"
+  },
+  "name": "Day1_update_in_DailyLimit"
+}

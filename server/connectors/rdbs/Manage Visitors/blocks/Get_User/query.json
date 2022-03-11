@@ -1,0 +1,11 @@
+{
+  "method": "select",
+  "table": "Users",
+  "schema": "dbo",
+  "name": "Get_User",
+  "where": {
+    "Email": "{email}"
+  },
+  "include": [],
+  "orderDirection": "ASC"
+}

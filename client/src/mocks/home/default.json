@@ -1,0 +1,40 @@
+{
+  "announcements": [
+    {
+      "Title": "Testing",
+      "Details": "Click here to open\r\nhttp://sealabcsm01.sealab.pwdemolabs.com/CherwellPortal/Suggested Menu Configuration for Crisis Management?_=7c541cb5#0",
+      "DateCreated": "2020-06-30 16:00:00"
+    },
+    {
+      "Title": "Demo Announcement",
+      "Details": "This is a demo",
+      "DateCreated": "2020-06-30 16:00:00"
+    },
+    {
+      "Title": "Work from home guidelines",
+      "Details": "As of 3/31/2020 all employees are requested to work from home until further notice. Certain employees that must come into the facility will be notified individually. Please file a Remote Work Request with IT so that your remote workspace can be properly setup.",
+      "DateCreated": "2020-06-30 16:00:00"
+    },
+    {
+      "Title": "Facilities Access ",
+      "Details": "As part of the Remote Work Initiative, facilites access will be limited for all of those designated as a remote worker. If you must come to the office, prior arrangements should be made with your manager and security.",
+      "DateCreated": "2020-06-30 16:00:00"
+    },
+    {
+      "Title": "Remote Work Requests",
+      "Details": "There is a new request type available in the Requester mobile application to better facilitate remote work requests. Please take a look!",
+      "DateCreated": "2020-06-30 16:00:00"
+    },
+    {
+      "Title": "Onsite employee meals",
+      "Details": "To assist those employees that must work on site during the facility shutdown, we have arranged for meals to be brought in to help everyone remain as isolated as possible. The daily menu will be posted at the security station.",
+      "DateCreated": "2020-06-30 16:00:00"
+    }
+  ],
+  "qrCode": "{\"formId\":\"1ef83b5224666b166a6e1cb6bf7c0711\"",
+  "latestTemperature": {
+    "date": "Yesterday",
+    "value": 98.6
+  },
+  "latestAnswers": {}
+}

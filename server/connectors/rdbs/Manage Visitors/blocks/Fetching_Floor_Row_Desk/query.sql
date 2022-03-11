@@ -1,0 +1,1 @@
+select * from Mapping_Information where Floor_No=(?)

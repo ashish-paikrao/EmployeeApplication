@@ -1,0 +1,31 @@
+{
+  "advanced": true,
+  "params": [
+    "{User_id}",
+    "{Loactioncode}",
+    "{Wen}",
+    "{selectedshift}"
+  ],
+  "output": {
+    "schema": "dbo",
+    "table": "EmployeeSchedule",
+    "type": "object",
+    "properties": {
+      "UserID": {
+        "type": "Number"
+      },
+      "LocationCode": {
+        "type": "String"
+      },
+      "ScheduleDate": {
+        "type": "String"
+      },
+      "SelectedShift": {
+        "type": "Number"
+      }
+    },
+    "id": "results",
+    "label": "inserted record"
+  },
+  "name": "day3"
+}

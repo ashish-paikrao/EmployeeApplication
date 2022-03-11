@@ -1,0 +1,11 @@
+{
+  "method": "insert",
+  "table": "EmploeeSchedule",
+  "schema": "dbo",
+  "name": "inserfulldaymon",
+  "input": {
+    "User_id": "{User_id1}",
+    "Mon1": "1",
+    "Mon2": "1"
+  }
+}

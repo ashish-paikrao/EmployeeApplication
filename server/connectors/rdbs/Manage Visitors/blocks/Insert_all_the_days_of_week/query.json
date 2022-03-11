@@ -1,0 +1,33 @@
+{
+  "advanced": true,
+  "params": [
+    "{User_id}",
+    "{Loactioncode1}",
+    "{Mon}",
+    "{selectedshift}",
+    "{User_id1}",
+    "{Loactioncode}",
+    "{Tue}",
+    "{selectedshift1}",
+    "{User_id2}",
+    "{Loactioncode2}",
+    "{Wen}",
+    "{selectedshift2}",
+    "{User_id3}",
+    "{Loactioncode3}",
+    "{Thu}",
+    "{selectedshift3}",
+    "{User_id4}",
+    "{Loactioncode4}",
+    "{Fri}",
+    "{selectedshift4}"
+  ],
+  "output": {
+    "type": "array",
+    "items": {
+      "type": "undefined"
+    },
+    "id": "results"
+  },
+  "name": "Insert_all_the_days_of_week"
+}

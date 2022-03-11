@@ -1,0 +1,17 @@
+{
+  "advanced": true,
+  "params": [
+    "3",
+    "{Sun1}",
+    "3",
+    "{User_id1}"
+  ],
+  "output": {
+    "type": "array",
+    "items": {
+      "type": "undefined"
+    },
+    "id": "results"
+  },
+  "name": "UPDATE_EmployeeSchedule1"
+}

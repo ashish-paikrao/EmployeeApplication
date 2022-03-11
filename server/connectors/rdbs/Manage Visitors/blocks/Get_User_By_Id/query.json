@@ -1,0 +1,11 @@
+{
+  "method": "select",
+  "table": "Users",
+  "schema": "dbo",
+  "name": "Get_User_By_Id",
+  "where": {
+    "Id": "{userId}"
+  },
+  "include": [],
+  "orderDirection": "ASC"
+}

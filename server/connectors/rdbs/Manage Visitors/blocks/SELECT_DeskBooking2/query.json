@@ -1,0 +1,11 @@
+{
+  "method": "select",
+  "table": "DeskBooking",
+  "schema": "dbo",
+  "name": "SELECT_DeskBooking2",
+  "where": {
+    "Date": "{selectedDate}"
+  },
+  "include": [],
+  "orderDirection": "ASC"
+}

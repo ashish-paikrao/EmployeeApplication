@@ -1,0 +1,55 @@
+{
+  "advanced": true,
+  "params": [
+    "{User_id}",
+    "{Mon}",
+    "{Fri}",
+    "{Loactioncode}"
+  ],
+  "output": {
+    "schema": "dbo",
+    "table": "Questions",
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "Text": {
+          "type": "String"
+        },
+        "Type": {
+          "type": "String"
+        },
+        "Index": {
+          "type": "Number"
+        },
+        "IsRequired": {
+          "type": "String"
+        },
+        "Id": {
+          "type": "Number"
+        },
+        "IsParent": {
+          "type": "String"
+        },
+        "ParentId": {
+          "type": "Number"
+        },
+        "Country": {
+          "type": "String"
+        },
+        "Answers": {
+          "schema": "dbo",
+          "table": "Answers",
+          "label": "Answers",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {}
+          }
+        }
+      }
+    },
+    "id": "results"
+  },
+  "name": "delete_older_EmployeeSchedule"
+}

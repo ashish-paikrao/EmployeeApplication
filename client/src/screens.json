@@ -1,0 +1,144 @@
+{
+  "id": "__BASE__",
+  "name": "BackToWork2012",
+  "screens": [
+    {
+      "id": "home",
+      "name": "Home",
+      "sourceScreenId": "home",
+      "sourceAppId": "backtowork2610",
+      "statusbarContent": "light",
+      "statusbarHidden": null,
+      "statusbarBackground": "#2c2c2e"
+    },
+    {
+      "id": "profile",
+      "name": "Profile",
+      "sourceScreenId": "profile",
+      "sourceAppId": "backtowork2610",
+      "statusbarContent": "light",
+      "statusbarHidden": null,
+      "statusbarBackground": "#2c2c2e"
+    },
+    {
+      "id": "question",
+      "name": "Question",
+      "sourceScreenId": "question",
+      "sourceAppId": "backtowork2610"
+    },
+    {
+      "id": "login",
+      "name": "Login",
+      "sourceScreenId": "login",
+      "sourceAppId": "backtowork2610"
+    },
+    {
+      "id": "mytemperature",
+      "name": "My temperature",
+      "modal": true,
+      "sourceScreenId": "mytemperature",
+      "sourceAppId": "backtowork2610"
+    },
+    {
+      "id": "settings",
+      "name": "Settings",
+      "modal": true,
+      "sourceScreenId": "settings",
+      "sourceAppId": "backtowork2610",
+      "statusbarContent": null,
+      "statusbarHidden": null,
+      "statusbarBackground": "#2c2c2e"
+    },
+    {
+      "id": "mapview",
+      "name": "Map View",
+      "modal": true,
+      "sourceScreenId": "mapview",
+      "sourceAppId": "backtowork2610"
+    },
+    {
+      "id": "answers",
+      "name": "Answers",
+      "sourceScreenId": "answers",
+      "sourceAppId": "backtowork2610"
+    },
+    {
+      "id": "oauthlogin",
+      "name": "oauthlogin",
+      "sourceScreenId": "oauthlogin",
+      "sourceAppId": "backtowork2610"
+    },
+    {
+      "id": "oauthloginv2",
+      "name": "oauthloginv2",
+      "sourceScreenId": "oauthloginv2",
+      "sourceAppId": "backtowork2610"
+    },
+    {
+      "id": "schedule",
+      "name": "//Schedule",
+      "sourceScreenId": "schedule",
+      "sourceAppId": "backtowork2610",
+      "statusbarContent": null,
+      "statusbarHidden": null
+    },
+    {
+      "id": "homelogin",
+      "name": "home_login",
+      "sourceScreenId": "homelogin",
+      "sourceAppId": "backtowork2610"
+    },
+    {
+      "id": "bookingsytem",
+      "name": "Booking Sytem",
+      "sourceScreenId": "blank",
+      "sourceAppId": "default",
+      "statusbarContent": null,
+      "statusbarHidden": null,
+      "statusbarBackground": "#2c2c2e"
+    },
+    {
+      "id": "floor2",
+      "name": "Floor2",
+      "sourceScreenId": "blank",
+      "sourceAppId": "default"
+    },
+    {
+      "id": "snackandlunchoption",
+      "name": "snack and Lunch Option",
+      "sourceScreenId": "blank",
+      "sourceAppId": "default",
+      "modal": true,
+      "statusbarContent": "light",
+      "statusbarHidden": null,
+      "preventAutoDismiss": true,
+      "disableMenuSwipe": true,
+      "statusbarBackground": "#28282a"
+    },
+    {
+      "id": "bookforother",
+      "name": "Book For Other",
+      "sourceScreenId": "blank",
+      "sourceAppId": "btw140220234"
+    },
+    {
+      "id": "history",
+      "name": "History",
+      "sourceScreenId": "history",
+      "sourceAppId": "implementationofsearch"
+    },
+    {
+      "id": "deskinformation",
+      "name": "deskInformation",
+      "sourceScreenId": "blank",
+      "sourceAppId": "default",
+      "statusbarContent": null,
+      "statusbarHidden": null,
+      "statusbarBackground": "#2c2c2e"
+    }
+  ],
+  "startScreen": "login",
+  "statusbarContent": "dark",
+  "statusbarHidden": false,
+  "statusbarBackground": null
+}

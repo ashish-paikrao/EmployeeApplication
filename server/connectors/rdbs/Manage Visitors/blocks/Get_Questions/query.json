@@ -1,0 +1,11 @@
+{
+  "method": "select",
+  "table": "Questions",
+  "schema": "dbo",
+  "name": "Get_Questions",
+  "where": {},
+  "include": [],
+  "limit": null,
+  "order": "Index",
+  "orderDirection": "ASC"
+}

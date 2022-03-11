@@ -1,0 +1,18 @@
+{
+  "method": "select",
+  "table": "DailyLimit",
+  "schema": "dbo",
+  "name": "update",
+  "where": {
+    "and": [
+      {
+        "LocationCode": "{Loactioncode}"
+      },
+      {
+        "ScheduleDate": "{selecteddate}"
+      }
+    ]
+  },
+  "include": [],
+  "orderDirection": "ASC"
+}

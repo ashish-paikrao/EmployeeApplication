@@ -1,0 +1,39 @@
+<ion-content class="content-coal" data-comp-id="content.1" style>
+    <ion-row align-items-center data-comp-id="row.1" justify-content-center style="margin: 100px 0 30px; padding: 0;">
+        <ion-col col-auto data-comp-id="column.1" style="margin: 0; padding: 0;">
+            <img data-comp-id="img.1" src="assets/images/login/Back_to_Work.svg" style="width: 220px; height: 100px;"></ion-col>
+        </ion-row>
+        <ion-row align-items-center data-comp-id="row.2" justify-content-center style="margin: 0; padding: 0;">
+            <ion-col col-auto data-comp-id="column.2" style="margin: 0; padding: 0;">
+                <div *ngIf="data.isError" data-comp-id="text.1" ion-text style="width: 190px; text-align: center; line-height: 1.5;">Username or Password are incorrect. Please Call Support.</div>
+            </ion-col>
+        </ion-row>
+        <ion-row align-items-center data-comp-id="row.3" justify-content-center style="padding: 0; margin: 44px 16px 16px;">
+            <ion-col data-comp-id="column.3" style="margin: 0; padding: 0;">
+                <form #form="ngForm" data-comp-id="form.1">
+                    <ion-list class="list-container-medium" data-comp-id="list.1" mode="ios" no-lines style="margin: 0; padding: 0;">
+                        <ion-item color="medium" data-comp-id="input.1" mode="ios" style="padding: 8px 0px 8px 12px; border-bottom: 1px solid rgb(44, 44, 46);">
+                            <ion-icon class=" ion-md-mail" color="primary" item-start style="font-size: 22px;"></ion-icon>
+                            <ion-input [(ngModel)]="data.email" mode="ios" name="email" placeholder="Email" type="email"></ion-input>
+                        </ion-item>
+                        <ion-item color="medium" data-comp-id="input.2" mode="ios" style="padding: 8px 0px 8px 12px;">
+                            <ion-icon class=" ion-ios-lock" color="primary" item-start style="font-size: 26px;"></ion-icon>
+                            <ion-input [(ngModel)]="data.password" mode="ios" name="password" placeholder="Password" type="password"></ion-input>
+                        </ion-item>
+                    </ion-list>
+                    <button (click)="login(form)" block class="login-button" color="primary" data-comp-id="button.1" ion-button mode="ios" style="border-radius: 10px; margin: 68px 0 0 0;">
+                        <span>Login</span>
+                    </button>
+                </form>
+                <touchid-login (onVerify)="action('submit')" [context]="this" data-comp-id="touchid-login.1" style="padding: 15px;" text-center>
+                    <ion-icon color="white" data-comp-id="icon.1" name="finger-print" style="font-size: 70px;"></ion-icon>
+                    <div color="white" data-comp-id="text.2" ion-text style="font-size: 17px;">{{ getBiometricAuthType() }}</div>
+                </touchid-login>
+            </ion-col>
+        </ion-row>
+        <ion-row data-comp-id="row.4" style="margin: 48px 0 24px;">
+            <ion-col class="centered" data-comp-id="column.4" style="padding: 0;">
+                <span data-comp-id="text.3" ion-text style="font-size: 15px; margin: 0 5px 0 0;">Powered By</span>
+                <img data-comp-id="img.2" src="assets/images/login/magic.svg"></ion-col>
+            </ion-row>
+        </ion-content>

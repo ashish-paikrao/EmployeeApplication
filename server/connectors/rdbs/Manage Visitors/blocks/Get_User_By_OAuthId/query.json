@@ -1,0 +1,18 @@
+{
+  "method": "select",
+  "table": "Users",
+  "schema": "dbo",
+  "name": "Get_User_By_OAuthId",
+  "where": {
+    "and": [
+      {
+        "OAuthId": "{oauthId}"
+      },
+      {
+        "Role": "EMPLOYEE"
+      }
+    ]
+  },
+  "include": [],
+  "orderDirection": "ASC"
+}

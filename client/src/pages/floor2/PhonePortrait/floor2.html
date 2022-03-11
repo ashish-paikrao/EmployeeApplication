@@ -1,0 +1,37 @@
+<ion-header data-comp-id="header.1" style="height: 73px;">
+    <ion-navbar data-comp-id="navbar.1" color="medium" style>
+        <button data-comp-id="button.1" icon-only ion-button menuToggle start>
+            <ion-icon class="ion-ios-menu" color="primary" style></ion-icon>
+        </button>
+        <ion-row data-comp-id="row.1" style="border-radius: 0px; padding: 0px; margin: 1px;" justify-content-center class="row-medium">
+            <ion-col data-comp-id="column.1" style="text-align: right; padding: 0px; max-width: 80%; margin: 2px 0px;">
+                <ion-icon style="font-size: 25px; padding: 0px; margin: 15px;" data-comp-id="icon.1" class=" ion-ios-arrow-back-outline" color="primary" (click)="backward()"></ion-icon>
+            </ion-col>
+            <ion-col data-comp-id="column.2" style="text-align: center; padding: 0px; margin: 2px 0px; max-width: 80%;">
+                <ion-list data-comp-id="list.1" style="margin: 1px 2px 1px 2px; padding: 1px 2px 1px 2px;" class="list-container-medium">
+                    <ion-item data-comp-id="datetime.1" color="medium" style="padding: 0px 0px 0px 0px; margin: 2px 1px 2px 1px; border-top: 0; border-bottom: 0;">
+                        <ion-label color="white" style="width: .75px;"></ion-label>
+                        <ion-datetime [(ngModel)]="data.selectedDate" max="12-12-2100" min="01-01-1900" displayFormat="DD-MM-YYYY" pickerFormat="DD-MM-YYYY"></ion-datetime>
+                    </ion-item>
+                </ion-list>
+            </ion-col>
+            <ion-col data-comp-id="column.3" style="padding: 0px; margin: 2px 0px; max-width: 80%;">
+                <ion-icon style="font-size: 25px; padding: 15px;" data-comp-id="icon.2" class=" ion-ios-arrow-forward-outline" color="primary" (click)="forwa()"></ion-icon>
+            </ion-col>
+        </ion-row>
+    </ion-navbar>
+</ion-header>
+<ion-content data-comp-id="content.1" class="content-black" style>
+    <ion-row data-comp-id="row.2">
+        <ion-col data-comp-id="column.4" style="max-width: 30%; margin: 1%; text-align: center; min-width: 30%;" align-self-center *ngFor="let item of data.totalDesks; let i = index" class="column-good"></ion-col>
+    </ion-row>
+    <ion-row data-comp-id="row.3" *ngFor="let item of data.rowList; let i = index" style="padding: 1px; margin: 7.5px 15px 5%;" class="row-medium" justify-content-start align-items-start>
+        <div ion-text data-comp-id="text.1" style="margin: 28px 2px 4px 2px; font-weight: bold; font-size: 15px;">Row</div>
+        <div ion-text data-comp-id="text.2" [innerHTML]="getRow(i)" style="margin: 28px 2px 4px 2px; font-weight: bold;"></div>
+        <ion-col data-comp-id="column.5" *ngFor="let item1 of item.colList; let i1 = index" style="max-width: 25%; margin: 0px; padding: 3px; text-align: center;" class="column-coal" (click)="getDeskID(i1,i)">
+            <ion-icon style="font-size: 20px; margin: 1px 20px; padding: 0px;" data-comp-id="icon.3" class=" ion-ios-desktop-outline"></ion-icon>
+            <span ion-text data-comp-id="text.3" style="width: 34.1px; margin: 0px 15px;">Desk</span>
+            <div ion-text data-comp-id="text.4" [innerHTML]="getName(i,i1)" style="width: 35.1px; margin: 0px 15px; font-size: 14px; padding: 0px; text-align: center;" color="white"></div>
+        </ion-col>
+    </ion-row>
+</ion-content>

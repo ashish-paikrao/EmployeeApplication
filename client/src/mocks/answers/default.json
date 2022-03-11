@@ -1,0 +1,42 @@
+{
+  "questions": [
+    {
+      "answer": true,
+      "Text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "Answer": "yes"
+    },
+    {
+      "answer": true,
+      "Text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "Answer": "yes"
+    },
+    {
+      "answer": false,
+      "Text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "Answer": "no"
+    }
+  ],
+  "topLevelQuestions": [
+    {
+      "Answer": "yes",
+      "Text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "answer": true
+    },
+    {
+      "Answer": "yes",
+      "Text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "answer": true
+    },
+    {
+      "Answer": "no",
+      "Text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "answer": false
+    }
+  ],
+  "temperature": "98.6",
+  "today": "Friday, 22 November",
+  "employee": {
+    "Phone": "484-364-4240",
+    "Name": "Delbert Jones"
+  }
+}

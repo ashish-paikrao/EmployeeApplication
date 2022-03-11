@@ -1,0 +1,7 @@
+{
+  "method": "insert",
+  "table": "Questions",
+  "schema": "dbo",
+  "name": "INSERT_Questions",
+  "input": {}
+}

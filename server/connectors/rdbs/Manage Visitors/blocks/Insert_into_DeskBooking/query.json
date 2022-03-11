@@ -1,0 +1,51 @@
+{
+  "advanced": true,
+  "params": [
+    "{selectedDesk}",
+    "{floorNo}",
+    "{UserId2}",
+    "{selectedDate}",
+    "{FromTime1}",
+    "{ToTime1}",
+    "{UserId3}",
+    "{snack1}",
+    "{lunch1}"
+  ],
+  "output": {
+    "schema": "dbo",
+    "table": "DeskBooking",
+    "type": "object",
+    "properties": {
+      "DeskID": {
+        "type": "String"
+      },
+      "FloorID": {
+        "type": "String"
+      },
+      "Booked_For_EmpID": {
+        "type": "String"
+      },
+      "Date": {
+        "type": "Date"
+      },
+      "FromTime": {
+        "type": "Date"
+      },
+      "ToTime": {
+        "type": "Date"
+      },
+      "Booked_by_EmpID": {
+        "type": "String"
+      },
+      "Snacks": {
+        "type": "Boolean"
+      },
+      "Lunch": {
+        "type": "Boolean"
+      }
+    },
+    "id": "results",
+    "label": "inserted record"
+  },
+  "name": "Insert_into_DeskBooking"
+}

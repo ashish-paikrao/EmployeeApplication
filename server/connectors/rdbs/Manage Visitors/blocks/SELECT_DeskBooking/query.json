@@ -1,0 +1,10 @@
+{
+  "method": "insert",
+  "table": "DeskBooking",
+  "schema": "dbo",
+  "name": "SELECT_DeskBooking",
+  "input": {
+    "Booked_For_EmpID": "{UserId}",
+    "Booked_by_EmpID": "{UserId1}"
+  }
+}

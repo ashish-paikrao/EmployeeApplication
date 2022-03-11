@@ -1,0 +1,9 @@
+{
+  "method": "select",
+  "table": "Questions",
+  "schema": "dbo",
+  "name": "SELECT_Questions",
+  "where": {},
+  "include": [],
+  "orderDirection": "ASC"
+}

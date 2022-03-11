@@ -1,0 +1,63 @@
+[
+  {
+    "id": "cordova-plugin-whitelist",
+    "default": true
+  },
+  {
+    "id": "cordova-plugin-app-event",
+    "default": true
+  },
+  {
+    "id": "cordova-plugin-device",
+    "default": true
+  },
+  {
+    "id": "cordova-plugin-statusbar",
+    "default": true
+  },
+  {
+    "id": "ionic-plugin-keyboard",
+    "default": true
+  },
+  {
+    "id": "cordova-plugin-powwow",
+    "default": true
+  },
+  {
+    "id": "cordova-plugin-wkwebview-engine",
+    "default": true
+  },
+  {
+    "id": "cordova-plugin-wkwebviewxhrfix",
+    "default": true
+  },
+
+  {
+    "id": "cordova-plugin-appminimize",
+    "default": true
+  },
+  {
+    "id": "phonegap-plugin-barcodescanner"
+  },
+  {
+    "id": "cordova-plugin-camera"
+  },
+  {
+    "id": "phonegap-plugin-push"
+  },
+  {
+    "id": "cordova-plugin-safariviewcontroller"
+  },
+  {
+    "id": "cordova-plugin-screen-orientation"
+  },
+  {
+    "id": "cordova-plugin-splashscreen"
+  },
+  {
+    "id": "cordova-plugin-keychain-touch-id"
+  },
+  {
+    "id": "cordova-plugin-customurlscheme"
+  }
+]

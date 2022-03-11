@@ -1,0 +1,30 @@
+{
+  "advanced": true,
+  "params": [
+    "{Mon}",
+    "{Fri}",
+    "{Loactioncode}"
+  ],
+  "output": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "LocationCode": {
+          "type": "string"
+        },
+        "ScheduleDate": {
+          "type": "string"
+        },
+        "MaxAllowed": {
+          "type": "number"
+        },
+        "Available": {
+          "type": "number"
+        }
+      }
+    },
+    "id": "results"
+  },
+  "name": "Check_available_for_all_days"
+}

@@ -1,0 +1,27 @@
+{
+  "temperatures": [
+    {
+      "date": "",
+      "value": "96",
+      "username": "Mike Smith"
+    },
+    {
+      "date": "2020-07-03",
+      "value": "97",
+      "username": "Luther Wilson"
+    },
+    {
+      "date": "2020-07-03",
+      "value": "98",
+      "username": "Luther Wilson"
+    }
+  ],
+  "userBooking": [
+    {
+      "userName": "Vedant"
+    },
+    {
+      "userName": "Ashish"
+    }
+  ]
+}

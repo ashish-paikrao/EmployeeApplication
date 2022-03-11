@@ -1,0 +1,81 @@
+<ion-header data-comp-id="header.1">
+    <ion-navbar color="black" data-comp-id="navbar.1" mode="ios" style="height: 100%;">
+        <button (click)="go('home')" color="transparent" data-comp-id="button.1" icon-only ion-button mode="ios" style>
+            <ion-icon class=" ion-ios-arrow-round-back-outline" color="primary" style="font-size: 34px; padding: 0px 16px;"></ion-icon>
+        </button>
+        <ion-title data-comp-id="title.1" mode="ios" *ngIf="data.showWarning">Please stay at home!</ion-title>
+        <ion-buttons data-comp-id="buttons.1" end>
+            <button (click)="save()" block color="primary" data-comp-id="button.2" ion-button style="padding: 0 16px;" [disabled]="!isValid">
+                <span>Save</span>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content data-comp-id="content.1" style class="content-coal">
+    <div data-comp-id="div.1" style="padding: 20px 14px 60px;">
+        <ion-row data-comp-id="row.1" style="padding: 0;">
+            <ion-col data-comp-id="column.1" style="padding: 0;">
+                <div color="primary" data-comp-id="text.1" ion-text style="font-size: 15px; font-weight: bold;">Today</div>
+                <div [innerHTML]="data.today" data-comp-id="text.2" ion-text style="font-size: 12px; margin: 4px 0 0 0;" formatting="date" input-format="YYYY-MM-DD" output-format="dddd, DD MMMM"></div>
+            </ion-col>
+        </ion-row>
+        <ion-title data-comp-id="title.2">
+            <div data-comp-id="text.3" ion-text color="white" style="text-align: left; font-size: 34px; margin: 0 0 10px;">Questions</div>
+        </ion-title>
+        <div ion-text data-comp-id="text.4" style="margin: 0 0 25px; width: 100%; color: rgba(255, 255, 255, 0.8); font-size: 12px; line-height: 18px;">
+            <b>Please respond to each of the following questions truthfully and to the best of your ability.</b>
+            Your participation is important to help us take precautionary measures to protect you and our other employees.</div>
+        <form data-comp-id="form.1">
+            <div data-comp-id="div.2" style="border-radius: 12px; overflow: hidden;">
+                <ion-row data-comp-id="row.2" class="row-medium" style="border-radius: 0; margin: 0; padding: 10px 19px 12px; border-bottom: 1px solid rgb(44, 44, 46);" *ngFor="let item of data.topLevelQuestions; let i = index" align-items-center>
+                    <ion-col data-comp-id="column.2" style="padding: 0 0 10px;" align-self-center col-12>
+                        <div ion-text data-comp-id="text.5" style="font-size: 12px; line-height: 16px; margin: 0;" [innerHTML]="item.Text"></div>
+                    </ion-col>
+                    <ion-col data-comp-id="column.3" style="max-width: 113px; margin: 0; padding: 0;" *ngIf="!item.IsParent">
+                        <ion-list radio-group data-comp-id="radio-group.1" class="radio-group-dark question-buttons" name="radio-group.1" mode="ios">
+                            <ion-item data-comp-id="radio.1" mode="ios" color="transparent" style="font-size: 13px;">
+                                <ion-label mode="ios" color="white" style color-checked="white">Yes</ion-label>
+                                <ion-radio [value]="Yes" mode="ios" [checked]="item.answer === true" (click)="item.answer = true; changeAnswer()"></ion-radio>
+                            </ion-item>
+                            <div data-comp-id="div.3" style="width: 1px; margin: 7px 0; background-color: #8e8e93;" *ngIf="item.answer === undefined"></div>
+                            <ion-item data-comp-id="radio.2" color="transparent" style="font-size: 13px;" mode="ios">
+                                <ion-label color-checked="white" style color="white" mode="ios">No</ion-label>
+                                <ion-radio [value]="No" mode="ios" [checked]="item.answer === false" (click)="item.answer = false; changeAnswer()"></ion-radio>
+                            </ion-item>
+                        </ion-list>
+                    </ion-col>
+                    <div data-comp-id="div.4" *ngIf="item.IsParent">
+                        <ion-item data-comp-id="checkbox.1" class="question-list-checkbox" color="transparent" style="border-bottom: 0px; border-top: 0px; padding: 0;" mode="ios" *ngFor="let childItem of data.topLevelWithChilds[item.Id]; let j = index">
+                            <ion-label text-left style="font-weight: normal; font-size: 12px;" mode="ios" text-wrap>{{ childItem.Text }}</ion-label>
+                            <ion-checkbox color="white" style mode="ios" [checked]="childItem.answer === true" (ionChange)="checkboxChange($event, childItem)"></ion-checkbox>
+                        </ion-item>
+                    </div>
+                </ion-row>
+            </div>
+            <ion-list data-comp-id="list.1">
+                <div ion-text data-comp-id="text.6" style="margin: 10px 19px; font-size: 15px; line-height: 22px;">
+                    Add Temperature, °F
+                </div>
+                <ion-row data-comp-id="row.3" nowrap class="row-medium" style="border-radius: 10px;">
+                    <ion-col data-comp-id="column.4" style="text-align: left; padding: 0;">
+                        <button ion-button data-comp-id="button.3" icon-only icon-start clear mode="ios" color="primary" style (click)="changeTemperature('down')">
+                            <ion-icon class=" ion-md-remove"></ion-icon>
+                        </button>
+                    </ion-col>
+                    <ion-col data-comp-id="column.5" style="text-align: center; padding: 0;" col-6 align-self-center>
+                        <ion-list data-comp-id="list.2" mode="ios" style="margin: 0;" no-lines class="list-container-transparent">
+                            <ion-item data-comp-id="input.1" style="padding: 0; width: auto; margin: 0 auto;" color="transparent" mode="ios">
+                                <ion-input type="number" placeholder="98.6" name="input.2" text-center color="white" style mode="ios" [(ngModel)]="data.temperature"></ion-input>
+                            </ion-item>
+                        </ion-list>
+                    </ion-col>
+                    <ion-col data-comp-id="column.6" style="text-align: right; padding: 0;">
+                        <button ion-button data-comp-id="button.4" icon-only icon-start clear color="primary" style (click)="changeTemperature('up')" mode="ios">
+                            <ion-icon class=" ion-md-add"></ion-icon>
+                        </button>
+                    </ion-col>
+                </ion-row>
+            </ion-list>
+        </form>
+    </div>
+</ion-content>

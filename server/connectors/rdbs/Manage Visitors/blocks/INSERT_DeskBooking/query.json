@@ -1,0 +1,17 @@
+{
+  "method": "insert",
+  "table": "DeskBooking",
+  "schema": "dbo",
+  "name": "INSERT_DeskBooking",
+  "input": {
+    "DeskID": "1",
+    "FloorID": "2",
+    "Booked_For_EmpID": "1005",
+    "Date": "2022-02-12",
+    "FromTime": "000000",
+    "ToTime": "000000",
+    "Booked_by_EmpID": "1005",
+    "Snacks": "1",
+    "Lunch": "0"
+  }
+}

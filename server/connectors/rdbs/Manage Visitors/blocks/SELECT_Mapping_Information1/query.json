@@ -1,0 +1,11 @@
+{
+  "method": "select",
+  "table": "Mapping_Information",
+  "schema": "dbo",
+  "name": "SELECT_Mapping_Information1",
+  "where": {
+    "Floor_No": "{floorNo}"
+  },
+  "include": [],
+  "orderDirection": "ASC"
+}

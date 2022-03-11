@@ -1,0 +1,17 @@
+{
+  "advanced": true,
+  "params": [],
+  "output": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "Floor_No": {
+          "type": "string"
+        }
+      }
+    },
+    "id": "results"
+  },
+  "name": "SELECT_Mapping_Information"
+}

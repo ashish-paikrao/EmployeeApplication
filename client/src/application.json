@@ -1,0 +1,21 @@
+{
+  "name": "EmployeeApplication",
+  "defaultLayout": "PhonePortrait",
+  "previewToken": "660a5462",
+  "theme": "Anchor",
+  "clientVersion": "6.1.2",
+  "hidden": false,
+  "isBuiltInTemplate": false,
+  "disableSideMenu": false,
+  "creatorId": "admin",
+  "created": 1635257766947,
+  "screensCount": 10,
+  "viewOnly": false,
+  "branch": "master",
+  "isRemote": false,
+  "creatorName": "nhamuliak",
+  "explorations": [],
+  "useMockData": false,
+  "isAppTemplate": false,
+  "isTemplate": false
+}

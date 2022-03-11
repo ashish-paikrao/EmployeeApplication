@@ -1,0 +1,21 @@
+{
+  "template": {
+    "url": "/initiateOauth2",
+    "method": "GET",
+    "query": {
+      "state": "{state}"
+    },
+    "headers": {},
+    "auth": {
+      "type": "none"
+    },
+    "form": {},
+    "options": {},
+    "bodyType": "form"
+  },
+  "functions": {
+    "GET_initiateOauth2": [
+      "state"
+    ]
+  }
+}

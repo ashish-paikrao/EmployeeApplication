@@ -1,0 +1,87 @@
+{
+  "deskInfo": [
+    {
+      "deskID": "F1R1D1",
+      "deskRow": "",
+      "deskColumn": "",
+      "Floor": "",
+      "ocuupied": "1"
+    },
+    {
+      "deskID": "F1R1D2",
+      "deskRow": "",
+      "deskColumn": "",
+      "Floor": ""
+    },
+    {
+      "deskID": "F1R1D3",
+      "deskRow": "",
+      "deskColumn": "",
+      "Floor": "",
+      "ocuupied": "1"
+    },
+    {
+      "deskID": "F1R1D4",
+      "deskRow": "",
+      "deskColumn": "",
+      "Floor": ""
+    },
+    {
+      "deskID": "F1R2D1",
+      "deskRow": "",
+      "deskColumn": "",
+      "Floor": ""
+    },
+    {
+      "deskID": "F1R2D2",
+      "deskRow": "",
+      "deskColumn": "",
+      "Floor": ""
+    },
+    {
+      "deskID": "F1R2D3",
+      "deskRow": "",
+      "deskColumn": "",
+      "Floor": ""
+    },
+    {
+      "deskID": "F1R2D4",
+      "deskRow": "",
+      "deskColumn": "",
+      "Floor": ""
+    },
+    {
+      "deskID": "F1R3D1",
+      "deskRow": "",
+      "deskColumn": "",
+      "Floor": ""
+    },
+    {
+      "deskID": "F1R3D2",
+      "deskRow": "",
+      "deskColumn": "",
+      "Floor": ""
+    },
+    {
+      "deskID": "F1R3D3",
+      "deskRow": "",
+      "deskColumn": "",
+      "Floor": "",
+      "ocuupied": "1"
+    },
+    {
+      "deskID": "F1R3D4",
+      "deskRow": "",
+      "deskColumn": "",
+      "Floor": ""
+    },
+    {
+      "deskID": "Some text",
+      "deskRow": "",
+      "deskColumn": "",
+      "Floor": ""
+    }
+  ],
+  "bookedInformation": [],
+  "dateSelected": "2022-03-01"
+}

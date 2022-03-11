@@ -1,0 +1,17 @@
+{
+  "advanced": true,
+  "params": [
+    "{userid}",
+    "{date}",
+    "{Days}",
+    "{Days1}"
+  ],
+  "output": {
+    "type": "array",
+    "items": {
+      "type": "undefined"
+    },
+    "id": "results"
+  },
+  "name": "inserting_in_2_colums"
+}

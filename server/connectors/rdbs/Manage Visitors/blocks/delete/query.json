@@ -1,0 +1,17 @@
+{
+  "advanced": true,
+  "params": [
+    "{User_id}",
+    "{Mon}",
+    "{Fri}",
+    "{Loactioncode}"
+  ],
+  "output": {
+    "type": "array",
+    "items": {
+      "type": "undefined"
+    },
+    "id": "results"
+  },
+  "name": "delete"
+}

@@ -1,0 +1,19 @@
+{
+  "advanced": true,
+  "params": [
+    "{day3}",
+    "{Loactioncode}",
+    "{Wen}"
+  ],
+  "output": {
+    "type": "object",
+    "id": "results",
+    "properties": {
+      "count": {
+        "id": "count",
+        "type": "number"
+      }
+    }
+  },
+  "name": "Day3_DailyLimit_update"
+}

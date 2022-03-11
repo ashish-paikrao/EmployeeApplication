@@ -1,0 +1,15 @@
+{
+  "advanced": true,
+  "params": [
+    "{onewayavailable}",
+    "{selecteddate}"
+  ],
+  "output": {
+    "type": "array",
+    "items": {
+      "type": "undefined"
+    },
+    "id": "results"
+  },
+  "name": "deducting_the_available_table"
+}

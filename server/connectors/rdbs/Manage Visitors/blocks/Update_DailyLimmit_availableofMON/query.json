@@ -1,0 +1,19 @@
+{
+  "advanced": true,
+  "params": [
+    "{Available}",
+    "{Mon}",
+    "{Loactioncode}"
+  ],
+  "output": {
+    "type": "object",
+    "id": "results",
+    "properties": {
+      "count": {
+        "id": "count",
+        "type": "number"
+      }
+    }
+  },
+  "name": "Update_DailyLimmit_availableofMON"
+}

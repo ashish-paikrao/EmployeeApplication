@@ -1,0 +1,17 @@
+{
+  "advanced": true,
+  "params": [
+    "{selectedDesk}",
+    "{floorNo}",
+    "",
+    ""
+  ],
+  "output": {
+    "type": "array",
+    "items": {
+      "type": "undefined"
+    },
+    "id": "results"
+  },
+  "name": "SELECT_DeskBooking1"
+}

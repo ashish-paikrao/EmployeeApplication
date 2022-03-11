@@ -1,0 +1,54 @@
+{
+  "advanced": true,
+  "params": [
+    "{day4}",
+    "{Loactioncode}",
+    "{Thu}"
+  ],
+  "output": {
+    "schema": "dbo",
+    "table": "Questions",
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "Text": {
+          "type": "String"
+        },
+        "Type": {
+          "type": "String"
+        },
+        "Index": {
+          "type": "Number"
+        },
+        "IsRequired": {
+          "type": "String"
+        },
+        "Id": {
+          "type": "Number"
+        },
+        "IsParent": {
+          "type": "String"
+        },
+        "ParentId": {
+          "type": "Number"
+        },
+        "Country": {
+          "type": "String"
+        },
+        "Answers": {
+          "schema": "dbo",
+          "table": "Answers",
+          "label": "Answers",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {}
+          }
+        }
+      }
+    },
+    "id": "results"
+  },
+  "name": "Day4_DailyLimit_Update"
+}

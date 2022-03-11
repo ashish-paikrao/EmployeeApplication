@@ -1,0 +1,12 @@
+{
+  "method": "insert",
+  "table": "EmployeeSchedule",
+  "schema": "dbo",
+  "name": "INSERT_EmployeeSchedule3",
+  "input": {
+    "UserID": "{User_id}",
+    "LocationCode": "{Loactioncode}",
+    "ScheduleDate": "{Wen}",
+    "SelectedShift": "{selectedshift}"
+  }
+}

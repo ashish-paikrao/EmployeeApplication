@@ -1,0 +1,11 @@
+{
+  "method": "insert",
+  "table": "Users",
+  "schema": "dbo",
+  "name": "Create_User_With_OAuth",
+  "input": {
+    "Role": "EMPLOYEE",
+    "Name": "{name}",
+    "OAuthId": "{oauthId}"
+  }
+}

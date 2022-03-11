@@ -1,0 +1,9 @@
+{
+  "method": "select",
+  "table": "EmployeeSchedule",
+  "schema": "dbo",
+  "name": "SELECT_EmployeeSchedule1",
+  "where": {},
+  "include": [],
+  "orderDirection": "ASC"
+}

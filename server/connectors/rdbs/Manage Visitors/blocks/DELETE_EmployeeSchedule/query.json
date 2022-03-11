@@ -1,0 +1,17 @@
+{
+  "advanced": true,
+  "params": [
+    "{selecteddate}"
+  ],
+  "output": {
+    "type": "object",
+    "id": "results",
+    "properties": {
+      "count": {
+        "id": "count",
+        "type": "number"
+      }
+    }
+  },
+  "name": "DELETE_EmployeeSchedule"
+}

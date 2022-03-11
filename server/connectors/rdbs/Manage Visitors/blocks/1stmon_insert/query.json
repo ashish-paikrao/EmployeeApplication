@@ -1,0 +1,16 @@
+{
+  "advanced": true,
+  "params": [
+    "{User_id}",
+    "1",
+    "0"
+  ],
+  "output": {
+    "type": "array",
+    "items": {
+      "type": "undefined"
+    },
+    "id": "results"
+  },
+  "name": "1stmon_insert"
+}

@@ -1,0 +1,77 @@
+<ion-header data-comp-id="header.1">
+    <ion-navbar data-comp-id="navbar.1" color="transparent" style>
+        <ion-title data-comp-id="title.1"></ion-title>
+        <ion-title data-comp-id="title.2">
+            <ion-row data-comp-id="row.1">
+                <ion-col data-comp-id="column.1" col-2></ion-col>
+                <ion-col data-comp-id="column.2" style="text-align: center;" align-self-center>
+                    <div data-comp-id="text.1" ion-text style="width: 100px; text-align: center; padding: 0px;">Dashboard</div>
+                </ion-col>
+            </ion-row>
+        </ion-title>
+        <button data-comp-id="button.1" icon-only ion-button menutoggle (click)="toggleMenu()" mode="ios" color="transparent" style="margin: 0px 0px 0px 10px;">
+            <ion-icon class="ion-ios-menu" style="padding: 0px;"></ion-icon>
+        </button>
+    </ion-navbar>
+</ion-header>
+<ion-content
+    class="content-coal" data-comp-id="content.1" style="style">
+    <!-- If there are Accouncements, show them -->
+    <ion-refresher enabled="true" data-comp-id="refresher.1" (ionRefresh)="onRefresh($event)">
+        <ion-refresher-content refreshingspinner="ios"></ion-refresher-content>
+    </ion-refresher>
+    <ion-slides #slides data-comp-id="slides.1" pager="true" style="height: 135px;">
+        <ion-slide *ngFor="let item of data.announcements; let i = index" data-comp-id="slide.1" style="margin-top: 7px">
+            <div data-comp-id="div.1" style="margin: 0 15px; border-radius: 11px; background-image: url(assets/images/virus_bg.svg); background-size: 100%; height: 100px;" class data-img (click)="showAnnouncement(item)">
+                <ion-row data-comp-id="row.2" style="padding: 15px 15px 5px 15px;">
+                    <ion-col data-comp-id="column.3" style="max-width: 25px; padding: 0;">
+                        <img src="assets/images/warning_icon.svg" data-comp-id="img.1" style="float: left;"></ion-col>
+                        <ion-col data-comp-id="column.4" align-self-center style="padding: 0 0 0 5px;">
+                            <div [innerHTML]="item.DateCreated" color="balanced" data-comp-id="text.2" ion-text style="font-size: 11px; text-align: left;" formatting="date" input-format="YYYY-MM-DD HH:mm:ss" output-format="D/M/YYYY h:mm A"></div>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row data-comp-id="row.3" style="padding: 0 15px 15px 15px;">
+                        <ion-col data-comp-id="column.5" style="padding: 0 0 0 30px; margin: 0px;">
+                            <div [innerHTML]="item.Details" color="white" data-comp-id="text.3" ion-text style="font-size: 13px; text-align: left; line-height: 1.2; margin: 0 0 0px 0; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; letter-spacing: -0.4px"></div>
+                        </ion-col>
+                    </ion-row>
+                </div>
+            </ion-slide>
+        </ion-slides>
+        <ion-card class="no-shadow" color="good" data-comp-id="card.1" mode="ios" style="margin: 5px 15px 20px; width: auto;" (click)="showTemperatures()">
+            <ion-card-content class data-comp-id="card-content.1" mode="ios" style="padding: 16px; background-image: linear-gradient(to right, #004eff, #00c3ff);">
+                <ion-row data-comp-id="row.4">
+                    <ion-col data-comp-id="column.6" style="padding: 0;">
+                        <div data-comp-id="text.4" ion-text style="font-size: 11px; letter-spacing: 1px; font-weight: 300" [innerHTML]="data.latestTemperature.date"></div>
+                        <div data-comp-id="text.5" ion-text style="font-size: 15px; letter-spacing: 1px">Temperature</div>
+                        <div data-comp-id="text.6" ion-text style="font-size: 24px; font-weight: 500">{{ data.latestTemperature.value ? data.latestTemperature.value + ' °F' : 'No Data' }}</div>
+                    </ion-col>
+                    <ion-col data-comp-id="column.7" style="padding: 0; text-align: right; max-width: 130px;" align-self-center>
+                        <img data-comp-id="img.2" src="assets/images/chart.svg" style="width: 125px; float: right;"></ion-col>
+                        <ion-col data-comp-id="column.8" style="padding: 0; text-align: right; max-width: 30px;" align-self-center *ngIf="data.latestTemperature.value">
+                            <ion-icon style="font-size: 22px;" data-comp-id="icon.1" class=" fa fa-angle-right"></ion-icon>
+                        </ion-col>
+                    </ion-row>
+                </ion-card-content>
+            </ion-card>
+            <ion-card color="medium" data-comp-id="card.2" mode="ios" style="margin: 20px 15px 10px; width: auto; border-top: 2px solid #000; border-right: 2px solid #000; border-bottom: 2px solid #000; border-left: 2px solid #000; padding: 0;">
+                <ion-card-content class="card-content-transparent" data-comp-id="card-content.2" mode="ios" style="padding: 24px;">
+                    <qrxcode data-comp-id="qr-code.1" *ngIf="data.qrCode" [qrdata]="data.qrCode" (click)="action('showAnswers')" [level]="'L'"></qrxcode>
+                    <div *ngIf="!data.qrCode" color="white" data-comp-id="text.7" ion-text="ion-text" style="font-size: 18px; text-align: center;">Take Back to work survey</div>
+                    <button block ion-button data-comp-id="button.2" color="primary" style="border-radius: 7px; font-size: 17px; margin: 35px 0 0;" icon-start (click)="go('question')" *ngIf="!data.qrCode">
+                        <ion-icon class=" ion-ios-add-circle-outline" style="padding: 0px 6.72px 0px 0px;"></ion-icon>
+                        <span style="font-weight: 500">Take COVID survey</span>
+                    </button>
+                    <button block ion-button data-comp-id="button.3" color="primary" style="border-radius: 7px; font-size: 17px; margin: 35px 0 0;" icon-start (click)="go('question')" *ngIf="data.qrCode">
+                        <ion-icon class=" ion-ios-add-circle-outline" style="padding: 0px 6.72px 0px 0px;"></ion-icon>
+                        <span style="font-weight: 500">Retake COVID survey</span>
+                    </button>
+                </ion-card-content>
+            </ion-card>
+            <ion-row data-comp-id="row.5" style="margin: 24px 0;">
+                <ion-col class="centered" data-comp-id="column.9" style="padding: 0;">
+                    <span data-comp-id="text.8" ion-text="ion-text" style="font-size: 15px; margin: 0 5px 0 0;">Powered By</span>
+                    <img data-comp-id="img.3" src="assets/images/home/magic.svg"></ion-col>
+                </ion-row>
+                <touchid-save [authRequest]="appService ? appService.getAuthRequest() : null" data-comp-id="touchid-save.1" message="Would you like to use {{ getBiometricAuthType() }} to login?" title="{{ getBiometricAuthType() }} Available"></touchid-save>
+            </ion-content>

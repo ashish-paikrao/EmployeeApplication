@@ -1,0 +1,14 @@
+{
+  "advanced": true,
+  "params": [
+    "{email}"
+  ],
+  "output": {
+    "type": "array",
+    "items": {
+      "type": "undefined"
+    },
+    "id": "results"
+  },
+  "name": "Get_EMPLOYEE_User"
+}
