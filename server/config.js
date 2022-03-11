@@ -80,7 +80,7 @@ module.exports = {
                 lazyConnect: false,
                 connector: 'mssql',
                 user: 'Dmytro',
-                password: '564de97efc1d1489a65b0d6b3adcf3aaa0ba62ea81f256a643c02aea',
+                password: '38d6f90dd0ff8b7c0c3a96ed19eb378c35e3fc5e3317909b2fec4333',
                 database: 'ManageVisitors',
                 connectionTimeout: 10000,
                 requestTimeout: 10000
