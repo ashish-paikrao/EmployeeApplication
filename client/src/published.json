@@ -1,13 +1,13 @@
 {
   "smartuxApp": "1.0",
-  "version": "1.0.62",
-  "date": 1636363479166,
-  "creator": "PowWow Admin",
+  "version": "1.0.63",
+  "date": 1646981922760,
+  "creator": "Ashish Paikrao",
   "clientVersion": "6.1.2",
-  "id": "backtoork2910",
-  "name": "BackToWork2910",
+  "id": "employeeapplication",
+  "name": "EmployeeApplication",
   "serverVersion": "6.1.2",
   "serverModulesIncluded": true,
-  "buildType": "JIT",
+  "buildType": "Production",
   "cbUrl": "/cb"
 }
