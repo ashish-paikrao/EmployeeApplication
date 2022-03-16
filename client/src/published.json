@@ -1,13 +1,13 @@
 {
   "smartuxApp": "1.0",
-  "version": "1.0.64",
-  "date": 1646989435043,
+  "version": "1.0.65",
+  "date": 1647417816709,
   "creator": "Ashish Paikrao",
   "clientVersion": "6.1.2",
-  "id": "employeeapplication",
-  "name": "EmployeeApplication",
+  "id": "123",
+  "name": "EmployeeApplication123",
   "serverVersion": "6.1.2",
   "serverModulesIncluded": true,
-  "buildType": "Production",
+  "buildType": "JIT",
   "cbUrl": "/cb"
 }
