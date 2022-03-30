@@ -97,6 +97,7 @@ export class deskinformation_PhonePortrait extends Screen {
       
   }
   getDeskID(i) {
+      this.alert('occupiedis'+this.data.deskInfo[i].occupied);
       this.global.row = parseInt(this.data.deskInfo[i].deskRow);
       this.global.column = parseInt(this.data.deskInfo[i].deskColumn);
       //this.data.selectedDesk = 'F' + this.global.floor + 'R' + this.global.row + 'C' + this.global.column;
