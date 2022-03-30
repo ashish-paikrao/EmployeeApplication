@@ -108,7 +108,7 @@ export class deskinformation_PhonePortrait extends Screen {
           this.alert("This desk is already booked please select another desk");
       }
       else {
-          this.alert(item.toString());
+          this.alert(String.valueOf(item));
         //   this.action('passData');
           
       }
