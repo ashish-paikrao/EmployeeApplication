@@ -1,6 +1,6 @@
 <ion-content data-comp-id="content.1" class="content-coal" style>
     <ion-row data-comp-id="row.1" align-items-center justify-content-center style="margin: 4px; padding: 2px;">
-        <ion-col data-comp-id="column.1" style="max-width: 25%; min-width: 25%; text-align: center; border-top: 2px solid white; border-bottom: 2px solid white; border-right: 1px dotted white; border-left: 1px dotted white; padding: 2px; margin: 6px 0px;" *ngFor="let item of data.deskInfo; let i = index" align-self-center [ngClass]="(item.ocuupied == '1')? 'odd' : 'even'" (click)="getDeskID(i)" class="column-light">
+        <ion-col data-comp-id="column.1" style="max-width: 25%; min-width: 25%; text-align: center; border-top: 2px solid white; border-bottom: 2px solid white; border-right: 1px dotted white; border-left: 1px dotted white; padding: 2px; margin: 6px 0px;" *ngFor="let item of data.deskInfo; let i = index" align-self-center [ngClass]="(item.ocuupied == '1')? 'odd' : 'even'" (click)="getDeskID(i,item)" class="column-light">
             <ion-icon style="font-size: 38px;" data-comp-id="icon.1" class=" ion-ios-desktop-outline" color="calm"></ion-icon>
             <div data-comp-id="text.1" ion-text [innerHTML]="item.deskID" style="margin: 0px 0px;" color="white"></div>
         </ion-col>
