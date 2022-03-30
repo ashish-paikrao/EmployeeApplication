@@ -1,6 +1,6 @@
 {
   "id": "__BASE__",
-  "name": "BackToWork2012",
+  "name": "EmployeeApplication (Main)",
   "screens": [
     {
       "id": "home",
