@@ -18,6 +18,7 @@ import { snackandlunchoption_PhonePortrait } from '../pages/snackandlunchoption/
 import { bookforother_PhonePortrait } from '../pages/bookforother/PhonePortrait/bookforother';
 import { history_PhonePortrait } from '../pages/history/PhonePortrait/history';
 import { deskinformation_PhonePortrait } from '../pages/deskinformation/PhonePortrait/deskinformation';
+import { floormap1_PhonePortrait } from '../pages/floormap1/PhonePortrait/floormap1';
 export class Screens {
   static declarations = [
     MenuComponent,
@@ -38,7 +39,8 @@ export class Screens {
     snackandlunchoption_PhonePortrait,
     bookforother_PhonePortrait,
     history_PhonePortrait,
-    deskinformation_PhonePortrait
+    deskinformation_PhonePortrait,
+    floormap1_PhonePortrait
   ];
   static mapping = {
     'home': {
@@ -94,6 +96,9 @@ export class Screens {
     },
     'deskinformation': {
       PhonePortrait: deskinformation_PhonePortrait
+    },
+    'floormap1': {
+      PhonePortrait: floormap1_PhonePortrait
     }
   }
 }

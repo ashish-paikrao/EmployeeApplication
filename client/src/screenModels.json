@@ -862,5 +862,11 @@
       }
     },
     "id": "deskinformation"
+  },
+  "floormap1": {
+    "type": "object",
+    "comment": "Blank",
+    "properties": {},
+    "id": "floormap1"
   }
 }

@@ -135,6 +135,12 @@
       "statusbarContent": null,
       "statusbarHidden": null,
       "statusbarBackground": "#2c2c2e"
+    },
+    {
+      "id": "floormap1",
+      "name": "floorMap1",
+      "sourceScreenId": "blank",
+      "sourceAppId": "default"
     }
   ],
   "startScreen": "login",

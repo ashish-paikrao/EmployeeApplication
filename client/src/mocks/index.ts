@@ -3,6 +3,7 @@ export { mock_bookforother as bookforother } from './bookforother/index';
 export { mock_bookingsytem as bookingsytem } from './bookingsytem/index';
 export { mock_deskinformation as deskinformation } from './deskinformation/index';
 export { mock_floor2 as floor2 } from './floor2/index';
+export { mock_floormap1 as floormap1 } from './floormap1/index';
 export { mock_history as history } from './history/index';
 export { mock_home as home } from './home/index';
 export { mock_homelogin as homelogin } from './homelogin/index';
