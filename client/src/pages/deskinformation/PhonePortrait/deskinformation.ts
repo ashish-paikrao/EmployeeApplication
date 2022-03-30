@@ -109,7 +109,7 @@ export class deskinformation_PhonePortrait extends Screen {
       }
       else {
           var xyz = item.toString();
-          this.alert(xyz);
+          this.alert(this.data.deskInfo[item].ocuupied);
         //   this.action('passData');
           
       }
