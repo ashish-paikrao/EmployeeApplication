@@ -103,16 +103,12 @@ export class deskinformation_PhonePortrait extends Screen {
       this.data.selectedDesk = this.data.deskInfo[i].deskID;
       this.data.selectedRow = this.global.row;
       this.data.selectedColumn = this.global.column;
-      
-    //   this.alert('F' + this.global.floor + 'R' + this.global.row + 'C' + this.global.column);
-      //this.data.Concat = this.data.selectRow.concat('R', this.data.selectColumn, 'C');
-      //this.data.selectDesk = this.data.rowList[0].colList[0];
-      //this.alert(this.data.selectedDesk);
       if (this.data.deskInfo[i].occupied == '1')
       {
           this.alert("This desk is already booked please select another desk");
       }
       else {
+          this.alert("In else");
           this.action('passData');
           
       }
