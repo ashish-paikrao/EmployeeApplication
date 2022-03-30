@@ -100,7 +100,6 @@ export class deskinformation_PhonePortrait extends Screen {
       console.log('occupied is' + this.data.deskInfo[i]);
       this.global.row = parseInt(this.data.deskInfo[i].deskRow);
       this.global.column = parseInt(this.data.deskInfo[i].deskColumn);
-      //this.data.selectedDesk = 'F' + this.global.floor + 'R' + this.global.row + 'C' + this.global.column;
       this.data.selectedDesk = this.data.deskInfo[i].deskID;
       this.data.selectedRow = this.global.row;
       this.data.selectedColumn = this.global.column;
@@ -109,8 +108,8 @@ export class deskinformation_PhonePortrait extends Screen {
           this.alert("This desk is already booked please select another desk");
       }
       else {
-        //   this.alert(this.data.deskInfo[i].ocuupied );
-          this.action('passData');
+          this.alert(this.data.deskInfo[i].occupied);
+        //   this.action('passData');
           
       }
 
