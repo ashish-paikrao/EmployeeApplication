@@ -109,7 +109,7 @@ export class deskinformation_PhonePortrait extends Screen {
       }
       else {
           this.alert(this.data.deskInfo[i].occupied);
-          this.action('passData');
+        //   this.action('passData');
           
       }
 
